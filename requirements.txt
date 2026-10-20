@@ -1,0 +1,18 @@
+# Cài PyTorch có CUDA (khuyến nghị nếu có GPU NVIDIA):
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+# Không có GPU: pip install torch==2.5.1  (bản CPU)
+torch==2.5.1
+transformers==4.46.3
+sentencepiece
+protobuf
+numpy<2
+pandas
+pyarrow
+scikit-learn
+scipy
+rapidfuzz
+pyyaml
+matplotlib
+gradio
+huggingface_hub
+pytest

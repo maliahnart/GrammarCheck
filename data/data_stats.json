@@ -1,0 +1,51 @@
+{
+  "train": {
+    "n": 152400,
+    "error_type": {
+      "spelling": 65399,
+      "mixed": 56174,
+      "none": 30573,
+      "abbreviation": 254
+    },
+    "style": {
+      "formal": 150000,
+      "informal": 2400
+    }
+  },
+  "val": {
+    "n": 800,
+    "error_type": {
+      "mixed": 306,
+      "none": 160,
+      "spelling": 326,
+      "abbreviation": 8
+    },
+    "style": {
+      "formal": 500,
+      "informal": 300
+    }
+  },
+  "test": {
+    "n": 1653,
+    "error_type": {
+      "mixed": 584,
+      "spelling": 766,
+      "none": 289,
+      "abbreviation": 14
+    },
+    "style": {
+      "formal": 1353,
+      "informal": 300
+    }
+  },
+  "leak_train_test": 0,
+  "leak_train_val": 0,
+  "lm_sentences": 211396,
+  "test_vsec": {
+    "n": 1000,
+    "error_type": {
+      "spelling": 800,
+      "none": 200
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "detector": {
+    "n_tokens": 400003,
+    "pos_rate": 0.1444839163706272
+  },
+  "tuning": [
+    {
+      "threshold": 0.45,
+      "w_channel": 1.2,
+      "wer_after": 0.05197677633397844,
+      "exact_match": 0.4725,
+      "clean_kept_rate": 0.7191011235955056
+    },
+    {
+      "threshold": 0.45,
+      "w_channel": 2.0,
+      "wer_after": 0.04755322090129942,
+      "exact_match": 0.4875,
+      "clean_kept_rate": 0.7528089887640449
+    },
+    {
+      "threshold": 0.45,
+      "w_channel": 3.0,
+      "wer_after": 0.0438208460049765,
+      "exact_match": 0.5025,
+      "clean_kept_rate": 0.7528089887640449
+    },
+    {
+      "threshold": 0.6,
+      "w_channel": 1.2,
+      "wer_after": 0.05142383190489356,
+      "exact_match": 0.4825,
+      "clean_kept_rate": 0.7640449438202247
+    },
+    {
+      "threshold": 0.6,
+      "w_channel": 2.0,
+      "wer_after": 0.0474149847940282,
+      "exact_match": 0.4875,
+      "clean_kept_rate": 0.7640449438202247
+    },
+    {
+      "threshold": 0.6,
+      "w_channel": 3.0,
+      "wer_after": 0.04465026264860381,
+      "exact_match": 0.4975,
+      "clean_kept_rate": 0.7640449438202247
+    },
+    {
+      "threshold": 0.75,
+      "w_channel": 1.2,
+      "wer_after": 0.053635609621233066,
+      "exact_match": 0.475,
+      "clean_kept_rate": 0.7865168539325843
+    },
+    {
+      "threshold": 0.75,
+      "w_channel": 2.0,
+      "wer_after": 0.04935029029582527,
+      "exact_match": 0.4825,
+      "clean_kept_rate": 0.7865168539325843
+    },
+    {
+      "threshold": 0.75,
+      "w_channel": 3.0,
+      "wer_after": 0.047000276472214546,
+      "exact_match": 0.49,
+      "clean_kept_rate": 0.7865168539325843
+    }
+  ],
+  "chosen": {
+    "threshold": 0.45,
+    "w_channel": 3.0
+  },
+  "train_seconds": 282.99319648742676
+}

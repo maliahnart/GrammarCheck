@@ -1,0 +1,50 @@
+seed: 42
+
+data:
+  raw_dir: data/raw
+  out_dir: data
+  # Nguồn câu sạch: phía "target" của nrl-ai/vn-spell-correction-train (CC-BY-SA-4.0).
+  # Câu train lấy từ train.jsonl, câu val/test lấy từ val.jsonl -> tách biệt hoàn toàn.
+  clean_train_file: data/raw/nrl_train.jsonl
+  clean_heldout_file: data/raw/nrl_val.jsonl
+  vsec_file: data/raw/vsec.parquet
+  min_words: 5
+  max_words: 30
+  max_chars: 160
+  n_train_sentences: 150000     # số câu sạch dùng để tạo cặp train
+  n_lm_sentences: 300000        # số câu sạch (phía train) để xây từ điển + n-gram LM
+  n_val: 500
+  n_test: 1500
+  n_informal_templates: 3000    # câu hội thoại sinh từ mẫu (chia đều vào các tập)
+  clean_ratio: 0.2              # tỉ lệ câu đúng (input == target) trong mỗi tập
+  n_vsec_test: 1000             # số câu VSEC dùng làm test lỗi thật
+  vsec_clean_ratio: 0.2
+
+ml:
+  model_path: models/ml_baseline.pkl
+  max_train_tokens: 400000
+  candidate_top_k: 25
+  beam_size: 8
+
+bilstm:
+  model_path: models/bilstm_attention.pt
+  emb_dim: 128
+  hidden_dim: 256
+  enc_layers: 2
+  dropout: 0.2
+  batch_size: 128
+  epochs: 20
+  lr: 0.002
+  max_len: 170
+
+transformer:
+  # Chọn sau thí nghiệm scripts/select_transformer.py (xem outputs/metrics/transformer_selection.json)
+  model_name: nrl-ai/vn-spell-correction-base
+  alt_model_name: bmd1905/vietnamese-correction-v2
+  max_length: 256
+  num_beams: 1
+  batch_size: 16
+
+eval:
+  latency_samples: 100
+  latency_samples_cpu: 30

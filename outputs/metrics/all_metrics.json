@@ -1,0 +1,734 @@
+{
+  "test": {
+    "ml": {
+      "raw": {
+        "n": 1653,
+        "sent_precision": 0.9554597701149425,
+        "sent_recall": 0.9750733137829912,
+        "sent_f1": 0.9651669085631349,
+        "tok_precision": 0.9247548529117471,
+        "tok_recall": 0.9161379857256146,
+        "tok_f1": 0.9204262523653023,
+        "edit_precision": 0.7108585858585859,
+        "edit_recall": 0.7373935821872953,
+        "edit_f05": 0.7160117003688159,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.013348313971565053,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.03874826885110646,
+        "exact_match": 0.5263157894736842,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.7854671280276817,
+        "overcorrected_clean": 62,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.6428571428571429,
+          "mixed": 0.4417808219178082,
+          "none": 0.7854671280276817,
+          "spelling": 0.4908616187989556
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5277161862527716,
+          "informal": 0.52
+        },
+        "batch_seconds_per_sent": 0.013215250919893591
+      },
+      "preserve": {
+        "n": 1653,
+        "sent_precision": 0.9552346570397112,
+        "sent_recall": 0.9699413489736071,
+        "sent_f1": 0.962531829756275,
+        "tok_precision": 0.926173139158576,
+        "tok_recall": 0.9078112609040444,
+        "tok_f1": 0.9169002803364037,
+        "edit_precision": 0.7084130019120459,
+        "edit_recall": 0.7278978388998035,
+        "edit_f05": 0.7122260668973472,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.01433053506317307,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.03989745705277426,
+        "exact_match": 0.514216575922565,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.7854671280276817,
+        "overcorrected_clean": 62,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.6428571428571429,
+          "mixed": 0.4092465753424658,
+          "none": 0.7854671280276817,
+          "spelling": 0.489556135770235
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5195861049519586,
+          "informal": 0.49
+        },
+        "batch_seconds_per_sent": 0.013758450223688493
+      }
+    },
+    "bilstm": {
+      "raw": {
+        "n": 1653,
+        "sent_precision": 0.9746079163554892,
+        "sent_recall": 0.9567448680351907,
+        "sent_f1": 0.9655937846836847,
+        "tok_precision": 0.9409368635437881,
+        "tok_recall": 0.91593973037272,
+        "tok_f1": 0.9282700421940928,
+        "edit_precision": 0.7648059904697073,
+        "edit_recall": 0.7357563850687623,
+        "edit_f05": 0.7588139943266243,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.013680431894626756,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.03709815245896809,
+        "exact_match": 0.5765275257108288,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.8823529411764706,
+        "overcorrected_clean": 34,
+        "expressive_tokens_lost": 46,
+        "exact_by_error_type": {
+          "abbreviation": 0.5,
+          "mixed": 0.541095890410959,
+          "none": 0.8823529411764706,
+          "spelling": 0.489556135770235
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5742793791574279,
+          "informal": 0.5866666666666667
+        },
+        "batch_seconds_per_sent": 0.002359845893569088
+      },
+      "preserve": {
+        "n": 1653,
+        "sent_precision": 0.9838461538461538,
+        "sent_recall": 0.9376832844574781,
+        "sent_f1": 0.9602102102102102,
+        "tok_precision": 0.9655998258219028,
+        "tok_recall": 0.8792624900872323,
+        "tok_f1": 0.9204109162602468,
+        "edit_precision": 0.783446307527649,
+        "edit_recall": 0.7190569744597249,
+        "edit_f05": 0.7696621337445677,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.010952825122247661,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.03541856970268439,
+        "exact_match": 0.5753176043557169,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.9273356401384083,
+        "overcorrected_clean": 21,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.6428571428571429,
+          "mixed": 0.4931506849315068,
+          "none": 0.9273356401384083,
+          "spelling": 0.5039164490861618
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5609756097560976,
+          "informal": 0.64
+        },
+        "batch_seconds_per_sent": 0.002567207604123835
+      }
+    },
+    "transformer": {
+      "raw": {
+        "n": 1653,
+        "sent_precision": 0.9739583333333334,
+        "sent_recall": 0.9596774193548387,
+        "sent_f1": 0.9667651403249632,
+        "tok_precision": 0.9407880724174654,
+        "tok_recall": 0.8756938937351308,
+        "tok_f1": 0.9070746483211829,
+        "edit_precision": 0.7478991596638656,
+        "edit_recall": 0.6411263916175508,
+        "edit_f05": 0.72379121691557,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.01731253003193985,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.04337448802192297,
+        "exact_match": 0.47428917120387176,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.8788927335640139,
+        "overcorrected_clean": 35,
+        "expressive_tokens_lost": 57,
+        "exact_by_error_type": {
+          "abbreviation": 0.35714285714285715,
+          "mixed": 0.09931506849315068,
+          "none": 0.8788927335640139,
+          "spelling": 0.6096605744125326
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5173688100517368,
+          "informal": 0.28
+        },
+        "batch_seconds_per_sent": 0.11190681477712272
+      },
+      "preserve": {
+        "n": 1653,
+        "sent_precision": 0.9839449541284404,
+        "sent_recall": 0.9435483870967742,
+        "sent_f1": 0.9633233532934132,
+        "tok_precision": 0.9724231464737794,
+        "tok_recall": 0.8528945281522601,
+        "tok_f1": 0.9087452471482889,
+        "edit_precision": 0.7671178343949044,
+        "edit_recall": 0.6309757694826457,
+        "edit_f05": 0.7353839108533048,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.015991124678481586,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.04101717889029673,
+        "exact_match": 0.48578342407743497,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.9273356401384083,
+        "overcorrected_clean": 21,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.5714285714285714,
+          "mixed": 0.0958904109589041,
+          "none": 0.9273356401384083,
+          "spelling": 0.6148825065274152
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5114560236511456,
+          "informal": 0.37
+        },
+        "batch_seconds_per_sent": 0.11223589703305446
+      }
+    }
+  },
+  "test_vsec": {
+    "ml": {
+      "raw": {
+        "n": 1000,
+        "sent_precision": 0.9419642857142857,
+        "sent_recall": 0.79125,
+        "sent_f1": 0.8600543478260869,
+        "tok_precision": 0.7302118171683389,
+        "tok_recall": 0.6616161616161617,
+        "tok_f1": 0.694223635400106,
+        "edit_precision": 0.6202964652223489,
+        "edit_recall": 0.579957356076759,
+        "edit_f05": 0.6117858749437697,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.007545976557166162,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.020502167630057803,
+        "exact_match": 0.537,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.805,
+        "overcorrected_clean": 39,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.805,
+          "spelling": 0.47
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.537
+        },
+        "batch_seconds_per_sent": 0.01926508116722107
+      },
+      "preserve": {
+        "n": 1000,
+        "sent_precision": 0.9419642857142857,
+        "sent_recall": 0.79125,
+        "sent_f1": 0.8600543478260869,
+        "tok_precision": 0.7302118171683389,
+        "tok_recall": 0.6616161616161617,
+        "tok_f1": 0.694223635400106,
+        "edit_precision": 0.6202964652223489,
+        "edit_recall": 0.579957356076759,
+        "edit_f05": 0.6117858749437697,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.007545976557166162,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.020502167630057803,
+        "exact_match": 0.537,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.805,
+        "overcorrected_clean": 39,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.805,
+          "spelling": 0.47
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.537
+        },
+        "batch_seconds_per_sent": 0.019630662679672242
+      }
+    },
+    "bilstm": {
+      "raw": {
+        "n": 1000,
+        "sent_precision": 0.8685121107266436,
+        "sent_recall": 0.6275,
+        "sent_f1": 0.7285921625544267,
+        "tok_precision": 0.39400428265524623,
+        "tok_recall": 0.3717171717171717,
+        "tok_f1": 0.38253638253638245,
+        "edit_precision": 0.3159173754556501,
+        "edit_recall": 0.2771855010660981,
+        "edit_f05": 0.3073286052009456,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.0228247824243426,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.05184248554913295,
+        "exact_match": 0.264,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.62,
+        "overcorrected_clean": 76,
+        "expressive_tokens_lost": 2,
+        "exact_by_error_type": {
+          "none": 0.62,
+          "spelling": 0.175
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.264
+        },
+        "batch_seconds_per_sent": 0.0037285416126251222
+      },
+      "preserve": {
+        "n": 1000,
+        "sent_precision": 0.8714285714285714,
+        "sent_recall": 0.61,
+        "sent_f1": 0.7176470588235295,
+        "tok_precision": 0.4746666666666667,
+        "tok_recall": 0.3595959595959596,
+        "tok_f1": 0.40919540229885054,
+        "edit_precision": 0.3456953642384106,
+        "edit_recall": 0.27825159914712155,
+        "edit_f05": 0.3297119757453259,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.0142870489482346,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.04175698458574181,
+        "exact_match": 0.27,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.64,
+        "overcorrected_clean": 72,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.64,
+          "spelling": 0.1775
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.27
+        },
+        "batch_seconds_per_sent": 0.004003321409225464
+      }
+    },
+    "transformer": {
+      "raw": {
+        "n": 1000,
+        "sent_precision": 0.9809825673534073,
+        "sent_recall": 0.77375,
+        "sent_f1": 0.8651292802236199,
+        "tok_precision": 0.8801020408163265,
+        "tok_recall": 0.696969696969697,
+        "tok_f1": 0.7779030439684329,
+        "edit_precision": 0.7941567065073041,
+        "edit_recall": 0.6375266524520256,
+        "edit_f05": 0.7569620253164556,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.005785248693827391,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.013908959537572254,
+        "exact_match": 0.653,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.94,
+        "overcorrected_clean": 12,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.94,
+          "spelling": 0.58125
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.653
+        },
+        "batch_seconds_per_sent": 0.1444489381313324
+      },
+      "preserve": {
+        "n": 1000,
+        "sent_precision": 0.9808,
+        "sent_recall": 0.76625,
+        "sent_f1": 0.8603508771929825,
+        "tok_precision": 0.8869908015768725,
+        "tok_recall": 0.6818181818181818,
+        "tok_f1": 0.7709880068532267,
+        "edit_precision": 0.8043478260869565,
+        "edit_recall": 0.6311300639658849,
+        "edit_f05": 0.7624935600206081,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.00570619560608565,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.013878853564547206,
+        "exact_match": 0.652,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.94,
+        "overcorrected_clean": 12,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.94,
+          "spelling": 0.58
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.652
+        },
+        "batch_seconds_per_sent": 0.14480379700660706
+      }
+    }
+  },
+  "test_real": {
+    "ml": {
+      "raw": {
+        "n": 95,
+        "sent_precision": 0.847457627118644,
+        "sent_recall": 0.9090909090909091,
+        "sent_f1": 0.8771929824561402,
+        "tok_precision": 0.8613861386138614,
+        "tok_recall": 0.8787878787878788,
+        "tok_f1": 0.8699999999999999,
+        "edit_precision": 0.7906976744186046,
+        "edit_recall": 0.8292682926829268,
+        "edit_f05": 0.7981220657276995,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.007669365146996165,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.02385008517887564,
+        "exact_match": 0.7473684210526316,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.775,
+        "overcorrected_clean": 9,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.7058823529411765,
+          "casing_punct": 0.8333333333333334,
+          "context": 0.5,
+          "grammar": 0.875,
+          "mixed": 0.6,
+          "none": 0.775,
+          "spelling": 0.7692307692307693
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.8367346938775511,
+          "informal": 0.6521739130434783
+        },
+        "batch_seconds_per_sent": 0.008659134413066663
+      },
+      "preserve": {
+        "n": 95,
+        "sent_precision": 0.847457627118644,
+        "sent_recall": 0.9090909090909091,
+        "sent_f1": 0.8771929824561402,
+        "tok_precision": 0.8613861386138614,
+        "tok_recall": 0.8787878787878788,
+        "tok_f1": 0.8699999999999999,
+        "edit_precision": 0.7906976744186046,
+        "edit_recall": 0.8292682926829268,
+        "edit_f05": 0.7981220657276995,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.007669365146996165,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.02385008517887564,
+        "exact_match": 0.7473684210526316,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.775,
+        "overcorrected_clean": 9,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.7058823529411765,
+          "casing_punct": 0.8333333333333334,
+          "context": 0.5,
+          "grammar": 0.875,
+          "mixed": 0.6,
+          "none": 0.775,
+          "spelling": 0.7692307692307693
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.8367346938775511,
+          "informal": 0.6521739130434783
+        },
+        "batch_seconds_per_sent": 0.008842367874948602
+      }
+    },
+    "bilstm": {
+      "raw": {
+        "n": 95,
+        "sent_precision": 0.7818181818181819,
+        "sent_recall": 0.7818181818181819,
+        "sent_f1": 0.7818181818181819,
+        "tok_precision": 0.8404255319148937,
+        "tok_recall": 0.797979797979798,
+        "tok_f1": 0.8186528497409327,
+        "edit_precision": 0.5051546391752577,
+        "edit_recall": 0.5975609756097561,
+        "edit_f05": 0.5212765957446808,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.028973157221985513,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.06473594548551959,
+        "exact_match": 0.4631578947368421,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.7,
+        "overcorrected_clean": 12,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.058823529411764705,
+          "casing_punct": 0.8333333333333334,
+          "context": 0.3333333333333333,
+          "grammar": 0.625,
+          "mixed": 0.0,
+          "none": 0.7,
+          "spelling": 0.23076923076923078
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.6530612244897959,
+          "informal": 0.2608695652173913
+        },
+        "batch_seconds_per_sent": 0.001518743916561729
+      },
+      "preserve": {
+        "n": 95,
+        "sent_precision": 0.8958333333333334,
+        "sent_recall": 0.7818181818181819,
+        "sent_f1": 0.8349514563106797,
+        "tok_precision": 0.9620253164556962,
+        "tok_recall": 0.7676767676767676,
+        "tok_f1": 0.8539325842696629,
+        "edit_precision": 0.5697674418604651,
+        "edit_recall": 0.5975609756097561,
+        "edit_f05": 0.5751173708920188,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.02513847464848743,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.05366269165247019,
+        "exact_match": 0.5578947368421052,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.875,
+        "overcorrected_clean": 5,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.11764705882352941,
+          "casing_punct": 0.8333333333333334,
+          "context": 0.3333333333333333,
+          "grammar": 0.625,
+          "mixed": 0.2,
+          "none": 0.875,
+          "spelling": 0.23076923076923078
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.673469387755102,
+          "informal": 0.43478260869565216
+        },
+        "batch_seconds_per_sent": 0.0016273448341771175
+      }
+    },
+    "transformer": {
+      "raw": {
+        "n": 95,
+        "sent_precision": 0.8205128205128205,
+        "sent_recall": 0.5818181818181818,
+        "sent_f1": 0.6808510638297872,
+        "tok_precision": 0.7777777777777778,
+        "tok_recall": 0.5656565656565656,
+        "tok_f1": 0.6549707602339181,
+        "edit_precision": 0.43333333333333335,
+        "edit_recall": 0.3170731707317073,
+        "edit_f05": 0.40372670807453426,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.034299105240732854,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.06814310051107325,
+        "exact_match": 0.42105263157894735,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.825,
+        "overcorrected_clean": 7,
+        "expressive_tokens_lost": 6,
+        "exact_by_error_type": {
+          "abbreviation": 0.11764705882352941,
+          "casing_punct": 0.0,
+          "context": 0.0,
+          "grammar": 0.0,
+          "mixed": 0.0,
+          "none": 0.825,
+          "spelling": 0.38461538461538464
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.5102040816326531,
+          "informal": 0.32608695652173914
+        },
+        "batch_seconds_per_sent": 0.05372710980867085
+      },
+      "preserve": {
+        "n": 95,
+        "sent_precision": 0.9375,
+        "sent_recall": 0.5454545454545454,
+        "sent_f1": 0.6896551724137931,
+        "tok_precision": 0.9464285714285714,
+        "tok_recall": 0.5353535353535354,
+        "tok_f1": 0.6838709677419355,
+        "edit_precision": 0.5531914893617021,
+        "edit_recall": 0.3170731707317073,
+        "edit_f05": 0.48148148148148157,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.02876011930123562,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.056218057921635436,
+        "exact_match": 0.4842105263157895,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.95,
+        "overcorrected_clean": 2,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.11764705882352941,
+          "casing_punct": 0.0,
+          "context": 0.0,
+          "grammar": 0.0,
+          "mixed": 0.0,
+          "none": 0.95,
+          "spelling": 0.46153846153846156
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.5102040816326531,
+          "informal": 0.45652173913043476
+        },
+        "batch_seconds_per_sent": 0.05388092743723016
+      }
+    }
+  }
+}

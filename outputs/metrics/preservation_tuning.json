@@ -1,0 +1,104 @@
+{
+  "ml": {
+    "raw": {
+      "wer_after": 0.041973791973791974,
+      "exact_match": 0.505,
+      "clean_kept_rate": 0.7375,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7124579124579123
+    },
+    "preserve_no_lm": {
+      "wer_after": 0.042997542997543,
+      "exact_match": 0.49875,
+      "clean_kept_rate": 0.7375,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7070433959713398
+    },
+    "preserve_lm_m0.0": {
+      "wer_after": 0.04292929292929293,
+      "exact_match": 0.49875,
+      "clean_kept_rate": 0.7375,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7073368463721118
+    },
+    "preserve_lm_m1.0": {
+      "wer_after": 0.04292929292929293,
+      "exact_match": 0.49875,
+      "clean_kept_rate": 0.7375,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7073368463721118
+    },
+    "preserve_lm_m2.0": {
+      "wer_after": 0.04292929292929293,
+      "exact_match": 0.49875,
+      "clean_kept_rate": 0.7375,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7073368463721118
+    },
+    "preserve_lm_m3.0": {
+      "wer_after": 0.04292929292929293,
+      "exact_match": 0.49875,
+      "clean_kept_rate": 0.7375,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7081022588935479
+    },
+    "preserve_lm_m5.0": {
+      "wer_after": 0.04272454272454272,
+      "exact_match": 0.5,
+      "clean_kept_rate": 0.7375,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7096380642537616
+    }
+  },
+  "transformer": {
+    "raw": {
+      "wer_after": 0.0533033033033033,
+      "exact_match": 0.425,
+      "clean_kept_rate": 0.85,
+      "expressive_tokens_lost": 53,
+      "edit_f05": 0.6884471240019554
+    },
+    "preserve_no_lm": {
+      "wer_after": 0.04818454818454818,
+      "exact_match": 0.455,
+      "clean_kept_rate": 0.93125,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7111149052415913
+    },
+    "preserve_lm_m0.0": {
+      "wer_after": 0.04702429702429702,
+      "exact_match": 0.4675,
+      "clean_kept_rate": 0.95625,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7188415790380969
+    },
+    "preserve_lm_m1.0": {
+      "wer_after": 0.04722904722904723,
+      "exact_match": 0.4675,
+      "clean_kept_rate": 0.95625,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7171177383209791
+    },
+    "preserve_lm_m2.0": {
+      "wer_after": 0.047365547365547364,
+      "exact_match": 0.4675,
+      "clean_kept_rate": 0.95625,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7167500431257546
+    },
+    "preserve_lm_m3.0": {
+      "wer_after": 0.04757029757029757,
+      "exact_match": 0.46625,
+      "clean_kept_rate": 0.95625,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7173725151253242
+    },
+    "preserve_lm_m5.0": {
+      "wer_after": 0.047706797706797706,
+      "exact_match": 0.46625,
+      "clean_kept_rate": 0.95625,
+      "expressive_tokens_lost": 0,
+      "edit_f05": 0.7165082108902333
+    }
+  }
+}

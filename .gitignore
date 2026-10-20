@@ -10,3 +10,12 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Vietnamese text correction project
+# Dữ liệu thô (tải lại bằng lệnh trong README; nrl_train.jsonl > 100 MB)
+data/raw/
+# VSEC (CC-BY-NC-ND-4.0): không phân phối lại bản đã chỉnh sửa -> tạo lại bằng src/prepare_data.py
+data/test_vsec.jsonl
+outputs/predictions/*__test_vsec.jsonl
+# Log chạy cục bộ
+outputs/*.log

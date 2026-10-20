@@ -1,0 +1,16 @@
+{
+  "ml": {
+    "file_mb": 7.585051,
+    "params": null,
+    "note": "34183 âm tiết, 269030 bigram, LR 14205 trọng số"
+  },
+  "bilstm": {
+    "file_mb": 23.654472,
+    "params": 5908132,
+    "best_epoch": 18
+  },
+  "transformer": {
+    "file_mb": 903.840441,
+    "params": 225950976
+  }
+}
