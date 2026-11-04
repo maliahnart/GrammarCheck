@@ -1,0 +1,15 @@
+"""Package the extension without test tools or development dependencies."""
+from pathlib import Path
+from zipfile import ZIP_DEFLATED, ZipFile
+
+ROOT = Path(__file__).resolve().parents[1]
+FILES = ["manifest.json", "index.html", "styles.css", "popup.js", "core.mjs", "service-worker.js"]
+
+
+if __name__ == "__main__":
+    output = ROOT / "dist/grammarcheck-extension.zip"
+    output.parent.mkdir(exist_ok=True)
+    with ZipFile(output, "w", ZIP_DEFLATED) as archive:
+        for name in FILES:
+            archive.write(ROOT / "apps/extension" / name, name)
+    print(output)

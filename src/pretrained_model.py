@@ -31,9 +31,24 @@ class TransformerCorrector:
         return sum(p.numel() for p in self.model.parameters())
 
     def _split(self, text: str) -> list[str]:
-        if len(text) <= self.max_chunk_chars:
-            return [text]
-        return [s for s in _SENT_RE.split(text) if s]
+        pieces = []
+        for sentence in _SENT_RE.split(text):
+            remaining = sentence.strip()
+            while remaining:
+                stop = min(len(remaining), self.max_chunk_chars)
+                # Count actual tokenizer tokens, including special tokens. A long
+                # sentence or unbroken word must never be silently truncated.
+                while stop and len(self.tok.encode(remaining[:stop], add_special_tokens=True)) > self.max_length:
+                    stop //= 2
+                if not stop:
+                    raise ValueError("Một ký tự vượt giới hạn tokenizer của mô hình.")
+                if stop < len(remaining):
+                    boundary = remaining.rfind(" ", 0, stop + 1)
+                    if boundary > 0:
+                        stop = boundary
+                pieces.append(remaining[:stop].strip())
+                remaining = remaining[stop:].lstrip()
+        return pieces or [""]
 
     @torch.no_grad()
     def correct_batch(self, texts: list[str], batch_size: int = 16) -> list[str]:
@@ -46,7 +61,7 @@ class TransformerCorrector:
         order = sorted(range(len(pieces)), key=lambda i: len(pieces[i]))
         for s in range(0, len(order), batch_size):
             ids = order[s:s + batch_size]
-            enc = self.tok([pieces[i] for i in ids], return_tensors="pt", padding=True, truncation=True,
+            enc = self.tok([pieces[i] for i in ids], return_tensors="pt", padding=True, truncation=False,
                            max_length=self.max_length).to(self.device)
             gen = self.model.generate(**enc, max_length=self.max_length, num_beams=self.num_beams)
             for i, g in zip(ids, self.tok.batch_decode(gen, skip_special_tokens=True)):

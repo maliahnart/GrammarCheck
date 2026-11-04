@@ -1,0 +1,243 @@
+{
+  "model": "ml",
+  "checkpoint_sha256": "4aa4973767775ab6cbb440c32230f5cccc4b4153c9016ceca65a8fd30a7d28c9",
+  "note": "Current checkpoint; product uses per-sentence inference and keeps original layout. Independent of historical report.",
+  "sets": {
+    "test": {
+      "legacy_pipeline": {
+        "n": 1653,
+        "sent_precision": 0.9552992069214131,
+        "sent_recall": 0.9714076246334311,
+        "sent_f1": 0.9632860777898946,
+        "tok_precision": 0.9250656433043829,
+        "tok_recall": 0.9080095162569389,
+        "tok_f1": 0.9164582291145572,
+        "edit_precision": 0.7065735154017149,
+        "edit_recall": 0.7285527177472167,
+        "edit_f05": 0.7108626198083068,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.014443596483789818,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.040103721601791556,
+        "exact_match": 0.514216575922565,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.7854671280276817,
+        "overcorrected_clean": 62,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.6428571428571429,
+          "mixed": 0.410958904109589,
+          "none": 0.7854671280276817,
+          "spelling": 0.48825065274151436
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5188470066518847,
+          "informal": 0.49333333333333335
+        }
+      },
+      "product_document_pipeline": {
+        "n": 1653,
+        "sent_precision": 0.9552669552669553,
+        "sent_recall": 0.9706744868035191,
+        "sent_f1": 0.9629090909090909,
+        "tok_precision": 0.925050505050505,
+        "tok_recall": 0.9078112609040444,
+        "tok_f1": 0.9163498098859315,
+        "edit_precision": 0.7060692723228471,
+        "edit_recall": 0.7275703994760969,
+        "edit_f05": 0.710267229254571,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.014535458888040928,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.04028051978666353,
+        "exact_match": 0.5136116152450091,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.7854671280276817,
+        "overcorrected_clean": 62,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.6428571428571429,
+          "mixed": 0.410958904109589,
+          "none": 0.7854671280276817,
+          "spelling": 0.4869451697127937
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5181079083518108,
+          "informal": 0.49333333333333335
+        }
+      }
+    },
+    "test_real": {
+      "legacy_pipeline": {
+        "n": 95,
+        "sent_precision": 0.847457627118644,
+        "sent_recall": 0.9090909090909091,
+        "sent_f1": 0.8771929824561402,
+        "tok_precision": 0.8461538461538461,
+        "tok_recall": 0.8888888888888888,
+        "tok_f1": 0.8669950738916256,
+        "edit_precision": 0.7752808988764045,
+        "edit_recall": 0.8414634146341463,
+        "edit_f05": 0.7876712328767123,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.007669365146996165,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.024701873935264053,
+        "exact_match": 0.7263157894736842,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.775,
+        "overcorrected_clean": 9,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.5882352941176471,
+          "casing_punct": 0.8333333333333334,
+          "context": 0.5,
+          "grammar": 0.875,
+          "mixed": 0.6,
+          "none": 0.775,
+          "spelling": 0.7692307692307693
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.8367346938775511,
+          "informal": 0.6086956521739131
+        }
+      },
+      "product_document_pipeline": {
+        "n": 95,
+        "sent_precision": 0.847457627118644,
+        "sent_recall": 0.9090909090909091,
+        "sent_f1": 0.8771929824561402,
+        "tok_precision": 0.8461538461538461,
+        "tok_recall": 0.8888888888888888,
+        "tok_f1": 0.8669950738916256,
+        "edit_precision": 0.7752808988764045,
+        "edit_recall": 0.8414634146341463,
+        "edit_f05": 0.7876712328767123,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.007669365146996165,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.024701873935264053,
+        "exact_match": 0.7263157894736842,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.775,
+        "overcorrected_clean": 9,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.5882352941176471,
+          "casing_punct": 0.8333333333333334,
+          "context": 0.5,
+          "grammar": 0.875,
+          "mixed": 0.6,
+          "none": 0.775,
+          "spelling": 0.7692307692307693
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.8367346938775511,
+          "informal": 0.6086956521739131
+        }
+      }
+    },
+    "test_vsec": {
+      "legacy_pipeline": {
+        "n": 1000,
+        "sent_precision": 0.9432835820895522,
+        "sent_recall": 0.79,
+        "sent_f1": 0.8598639455782312,
+        "tok_precision": 0.7304250559284117,
+        "tok_recall": 0.6595959595959596,
+        "tok_f1": 0.6932059447983016,
+        "edit_precision": 0.620137299771167,
+        "edit_recall": 0.5778251599147122,
+        "edit_f05": 0.6111862877762743,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.007574723134526795,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.02053227360308285,
+        "exact_match": 0.538,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.81,
+        "overcorrected_clean": 38,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.81,
+          "spelling": 0.47
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.538
+        }
+      },
+      "product_document_pipeline": {
+        "n": 1000,
+        "sent_precision": 0.9390787518573551,
+        "sent_recall": 0.79,
+        "sent_f1": 0.8581126951799051,
+        "tok_precision": 0.7222222222222222,
+        "tok_recall": 0.6565656565656566,
+        "tok_f1": 0.6878306878306878,
+        "edit_precision": 0.6056818181818182,
+        "edit_recall": 0.5682302771855011,
+        "edit_f05": 0.5978017048003589,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.007804695753411859,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.021104287090558768,
+        "exact_match": 0.525,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.795,
+        "overcorrected_clean": 41,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.795,
+          "spelling": 0.4575
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.525
+        }
+      }
+    }
+  }
+}

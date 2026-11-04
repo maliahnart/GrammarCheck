@@ -1200,7 +1200,6 @@ tri	359
 ngang	358
 khủng	358
 đỗ	357
-d	357
 khiển	357
 thuê	357
 bọn	357
@@ -1504,6 +1503,7 @@ rau	225
 bưu	225
 loire	225
 lỏng	225
+d	225
 túc	225
 khoáng	224
 hạnh	224
@@ -3573,7 +3573,6 @@ playstation	34
 dollar	34
 soi	34
 má	34
-3-4	34
 c1	34
 hôi	34
 at	34
@@ -3644,6 +3643,7 @@ mordella	33
 zhukov	33
 wwe	33
 dật	33
+3-4	33
 diều	33
 quất	33
 eleutherodactylus	33

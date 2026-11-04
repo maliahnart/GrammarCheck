@@ -77,6 +77,9 @@ class Edit:
     kind: str
     accepted: bool
     reason: str = ""
+    start: int = 0
+    end: int = 0
+    replacement: str = ""
 
     @property
     def explanation(self) -> str:
@@ -267,7 +270,10 @@ def preserve(src_text: str, out_text: str, normalize_abbrev: bool = True, vocab:
             ok, reason = False, "Đã tắt chuẩn hoá viết tắt"
         else:
             ok, reason = True, ""
-        edits.append(Edit(" ".join(src), " ".join(out), kind, ok, reason))
+        start = S[i1][1] if i1 < len(S) else len(src_text)
+        end = S[i2 - 1][2] if i2 > i1 else start
+        replacement = out_text[O[j1][1]:O[j2 - 1][2]] if j2 > j1 else ""
+        edits.append(Edit(" ".join(src), " ".join(out), kind, ok, reason, start, end, replacement))
         emit("out", j1, j2) if ok else emit("src", i1, i2)
 
     text = re.sub(r"[ \t]{2,}", " ","".join(ws + t for ws, t in pieces)).strip()

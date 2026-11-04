@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GrammarCheck · Tiếng Việt</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header><div class="brand">VI<span>✓</span></div><div><small>GRAMMARCHECK</small><h1>Tiếng Việt, rõ hơn.</h1></div><button id="expand" class="quiet" title="Mở trong tab riêng">↗</button></header>
+    <nav aria-label="Ứng dụng">
+      <button data-mode="document" aria-pressed="true">Tài liệu</button>
+      <button data-mode="learn" aria-pressed="false">Học tiếng Việt</button>
+      <button data-mode="dataset" aria-pressed="false">Dữ liệu NLP</button>
+    </nav>
+    <p id="intro">Rà soát văn bản, giữ cách diễn đạt của bạn.</p>
+    <details id="settings"><summary>Kết nối & tùy chọn</summary>
+      <label>Địa chỉ API <input id="endpoint" type="url" value="http://127.0.0.1:8000" placeholder="https://api.example.com"></label>
+      <label>API key (nếu có) <input id="api-key" type="password" autocomplete="off"></label>
+      <label>Mô hình <select id="model"><option value="ml">ML Baseline</option><option value="bilstm">BiLSTM + Attention</option><option value="transformer">Transformer ViT5</option></select></label>
+      <label class="check"><input id="preserve" type="checkbox" checked>Bảo toàn văn phong</label>
+      <label class="check"><input id="abbrev" type="checkbox">Mở rộng viết tắt</label>
+      <label>Thuật ngữ giữ nguyên (mỗi dòng một mục)<textarea id="terms" rows="2" placeholder="Tên riêng, tên sản phẩm…"></textarea></label>
+      <button id="save" class="secondary">Lưu kết nối</button>
+    </details>
+    <section id="editor">
+      <div class="toolbar"><label for="source">VĂN BẢN CỦA BẠN</label><button id="selection" class="quiet">Lấy đoạn đã chọn</button><label class="file-button">Mở TXT<input id="text-file" type="file" accept=".txt,text/plain"></label></div>
+      <textarea id="source" rows="6" maxlength="30000" placeholder="Nhập câu, đoạn văn hoặc chọn văn bản trên trang…"></textarea>
+      <div class="meta"><span id="count">0 / 30.000 ký tự</span><span>Chỉ gửi khi bạn bấm kiểm tra</span></div>
+      <button id="check" class="primary">Kiểm tra văn bản</button>
+    </section>
+    <section id="dataset" hidden>
+      <p>CSV/JSONL · UTF-8 · tối đa 300 bản ghi, 2 MB. Giữ bản gốc và thêm các cột <code>_gc_</code>.</p>
+      <label>Tên cột văn bản<input id="column" value="text"></label>
+      <label>Tệp dữ liệu<input id="data-file" type="file" accept=".csv,.jsonl"></label>
+      <button id="clean" class="primary">Chuẩn hóa & tải kết quả</button>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="results" hidden>
+      <div class="section-title"><h2>Bản sửa đang chọn</h2><button id="copy" class="quiet">Sao chép</button></div>
+      <textarea id="output" rows="5" readonly aria-label="Văn bản sau khi sửa"></textarea>
+      <button id="replace" class="secondary" hidden>Thay đoạn đã chọn trên trang</button>
+      <h2>Duyệt thay đổi</h2><p class="hint">Bật/tắt từng mục để chọn bản sửa. Gợi ý cần được đọc lại trong ngữ cảnh.</p><div id="edits"></div>
+    </section>
+    <section id="learning" hidden><h2>Khám phá tiếng Việt</h2><p>Chính tả · Từ vựng · Ngữ pháp · Giao tiếp</p><button id="load-lessons" class="secondary">Mở bài học & câu hỏi</button><div id="lessons"></div></section>
+    <footer>Văn bản được xử lý tại máy chủ bạn cấu hình. Bản này cần kết nối API.</footer>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

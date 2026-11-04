@@ -19,3 +19,14 @@ data/test_vsec.jsonl
 outputs/predictions/*__test_vsec.jsonl
 # Log chạy cục bộ
 outputs/*.log
+
+# Product apps and local API configuration
+.env
+*.apk
+*.ipa
+apps/mobile/build/
+apps/mobile/.dart_tool/
+node_modules/
+playwright-report/
+test-results/
+dist/

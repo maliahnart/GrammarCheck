@@ -12,6 +12,23 @@ dùng chung cho cả ba.
 
 Kết quả thực nghiệm và phân tích: xem [report.md](report.md).
 
+## Extension và ứng dụng iOS/Android
+
+Đã bổ sung `backend/` (FastAPI), `apps/extension/` (Manifest V3) và `apps/mobile/` (Flutter iOS/Android),
+cùng ba chế độ **kiểm tra tài liệu**, **hỗ trợ học tiếng Việt** và **chuẩn hóa dữ liệu NLP**.
+Mô hình chạy tại API dùng chung; ứng dụng cần kết nối máy chủ.
+
+Hướng dẫn chạy/cài đặt, giới hạn và kiểm thử: [docs/MULTIPLATFORM.md](docs/MULTIPLATFORM.md).
+
+```bash
+python -m pip install -r requirements-api.txt
+python scripts/run_api.py
+```
+
+Extension có thể nạp bằng Load unpacked. App Flutter có sẵn dự án native cho cả iOS và Android.
+Kết quả đánh giá lại checkpoint ML hiện tại được lưu riêng ở `outputs/metrics/product_ml_evaluation.json`;
+báo cáo bên dưới vẫn mô tả thí nghiệm ban đầu.
+
 ## Cấu trúc
 
 ```text
