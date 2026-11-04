@@ -1,0 +1,17 @@
+{
+  "version": "experimental-phase1-v1",
+  "model": "ml",
+  "wordlist": "data/Viet74K.txt",
+  "beam_width": 12,
+  "max_candidates": 12,
+  "max_phrase_syllables": 4,
+  "max_variants_per_edge": 8,
+  "channel_weight": 1.5,
+  "phrase_weight": 0.25,
+  "policy_grid": {
+    "realword_margin": [0.0, 1.0, 2.0, 4.0],
+    "sentence_margin": [0.0, 0.05, 0.15]
+  },
+  "selection": "Maximize edit F0.5 on existing val; ties prefer clean retention, then lower WER, then stricter margins. Test labels are never used to select policy.",
+  "scope": "Separate ML-only experiment. No training, no changes to original inference, API, models, datasets or historical metrics. No cross-sentence semantic reranker in phase 1."
+}

@@ -1,0 +1,13 @@
+{
+  "python_tests": {
+    "passed": 40,
+    "skipped": 1,
+    "skip_reason": "Real Transformer inference is opt-in and was not run."
+  },
+  "original_files_checked": 78,
+  "original_files_unchanged": true,
+  "frozen_evaluation_sources_match": true,
+  "cli_rejects_changed_checkpoint_policy": true,
+  "cli_real_ml_smoke": "OpenAI hoc. -> OpenAI h\u1ecdc. with OpenAI protected",
+  "legacy_metrics_match_existing_product_evaluation": true
+}

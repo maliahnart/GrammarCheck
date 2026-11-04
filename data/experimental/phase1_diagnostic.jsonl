@@ -1,0 +1,24 @@
+{"id":"p1-001","input":"Anh em ra xem.","target":"Anh em ra xem.","category":"correct_low_accent","style":"informal"}
+{"id":"p1-002","input":"Em đi mua rau.","target":"Em đi mua rau.","category":"correct_low_accent","style":"informal"}
+{"id":"p1-003","input":"Em ăn cơm trưa.","target":"Em ăn cơm trưa.","category":"correct_ambiguity","style":"informal"}
+{"id":"p1-004","input":"Em ăn cơm trưa à?","target":"Em ăn cơm trưa à?","category":"correct_ambiguity","style":"informal"}
+{"id":"p1-005","input":"Mai nhớ mang theo áo mưa.","target":"Mai nhớ mang theo áo mưa.","category":"correct_realword","style":"informal"}
+{"id":"p1-006","input":"Thôi được rồi, mai tính tiếp vậy.","target":"Thôi được rồi, mai tính tiếp vậy.","category":"correct_realword","style":"informal"}
+{"id":"p1-007","input":"Mình ổn mà hihi :)) 🙂","target":"Mình ổn mà hihi :)) 🙂","category":"expressive","style":"informal"}
+{"id":"p1-008","input":"Đẹpppp quá hihi :))","target":"Đẹpppp quá hihi :))","category":"expressive","style":"informal"}
+{"id":"p1-009","input":"Hahaha, vui ghê ^^","target":"Hahaha, vui ghê ^^","category":"expressive","style":"informal"}
+{"id":"p1-010","input":"OpenAI cung cấp API cho iOS.","target":"OpenAI cung cấp API cho iOS.","protected_terms":["OpenAI","API","iOS"],"category":"protected_terms","style":"formal"}
+{"id":"p1-011","input":"Zyphora đã gửi tài liệu cho tôi.","target":"Zyphora đã gửi tài liệu cho tôi.","protected_terms":["Zyphora"],"category":"protected_terms","style":"formal"}
+{"id":"p1-012","input":"Mã #DH123 có giá 125.000 đồng.","target":"Mã #DH123 có giá 125.000 đồng.","category":"protected_structure","style":"formal"}
+{"id":"p1-013","input":"Xem https://example.com/hoc và gửi tới hoc@example.com.","target":"Xem https://example.com/hoc và gửi tới hoc@example.com.","category":"protected_structure","style":"formal"}
+{"id":"p1-014","input":"🙂 Tôi đi hoc.\r\n\r\n\tEm  đi hoc.  ","target":"🙂 Tôi đi học.\r\n\r\n\tEm  đi học.  ","category":"layout","style":"informal"}
+{"id":"p1-015","input":"Bạn ơi, tôi đang hoc bài.","target":"Bạn ơi, tôi đang học bài.","category":"spelling","style":"informal"}
+{"id":"p1-016","input":"Tôi đã hoàn thành công viêc.","target":"Tôi đã hoàn thành công việc.","category":"spelling","style":"formal"}
+{"id":"p1-017","input":"Tuy trời mưa nhưng nên tôi vẫn đi học.","target":"Tuy trời mưa nhưng tôi vẫn đi học.","category":"grammar","style":"formal"}
+{"id":"p1-018","input":"Các các em học sinh đã đến lớp.","target":"Các em học sinh đã đến lớp.","category":"grammar","style":"formal"}
+{"id":"p1-019","input":"Tôi đã đã hoàn thành báo cáo.","target":"Tôi đã hoàn thành báo cáo.","category":"grammar","style":"formal"}
+{"id":"p1-020","input":"Mình ko đi học hôm nay.","target":"Mình không đi học hôm nay.","category":"abbreviation","style":"informal"}
+{"id":"p1-021","input":"Mình ko đi học hôm nay.","target":"Mình ko đi học hôm nay.","normalize_abbrev":false,"category":"abbreviation_disabled","style":"informal"}
+{"id":"p1-022","input":"Tôi đọc tài liệu Kubernetes mỗi ngày.","target":"Tôi đọc tài liệu Kubernetes mỗi ngày.","protected_terms":["Kubernetes"],"category":"protected_terms","style":"formal"}
+{"id":"p1-023","input":"Tôi vẫn từ từ bước xuống cầu thang.","target":"Tôi vẫn từ từ bước xuống cầu thang.","category":"correct_reduplication","style":"formal"}
+{"id":"p1-024","input":"Dạ vâng, em cảm ơn chị ạ.","target":"Dạ vâng, em cảm ơn chị ạ.","category":"expressive","style":"informal"}

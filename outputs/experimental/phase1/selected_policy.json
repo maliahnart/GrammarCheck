@@ -1,0 +1,25 @@
+{
+  "version": "experimental-phase1-v1",
+  "policy": {
+    "realword_margin": 0.0,
+    "sentence_margin": 0.15
+  },
+  "no_lexicon_policy": {
+    "realword_margin": 0.0,
+    "sentence_margin": 0.0
+  },
+  "selected_on": "data/val.jsonl",
+  "n_validation": 800,
+  "selection_rule": "Maximize edit F0.5 on existing val; ties prefer clean retention, then lower WER, then stricter margins. Test labels are never used to select policy.",
+  "source_hashes": {
+    "configs/experimental_phase1.json": "653df7c152fbe2e2dd5b6ccc4655f1dc307d49d00d209bf721a87ba6a918643b",
+    "scripts/evaluate_experimental.py": "29f9bd53739c9e9f0de2e562ab812af89b369c6eabd04f842ca884aa48ddf7ba",
+    "src/experimental_core/__init__.py": "4103ea14b5bc555c1ec490d2c46b1ac80c47ec9a58356616e51f088243b91181",
+    "src/experimental_core/engine.py": "0608348e4cec0c900705045c32d371e0c736293422dff650aaf4a1a6f7268aca",
+    "src/experimental_core/lexicon.py": "cecb451cf92f7c6300bd722f0adafd640b469dee938ec5e7f2a209f73af0c2b1"
+  },
+  "checkpoint_sha256": "4aa4973767775ab6cbb440c32230f5cccc4b4153c9016ceca65a8fd30a7d28c9",
+  "wordlist_sha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90",
+  "validation_sha256": "f76b9f3ca21a54acb43c504ce73c94f3ecfbba31dbf2f43fb161fa509de17092",
+  "frozen_at_utc": "2026-11-04T07:26:56.885237+00:00"
+}

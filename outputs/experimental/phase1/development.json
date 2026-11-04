@@ -1,0 +1,1332 @@
+{
+  "validation": {
+    "legacy": {
+      "n": 800,
+      "sent_precision": 0.937125748502994,
+      "sent_recall": 0.978125,
+      "sent_f1": 0.9571865443425076,
+      "tok_precision": 0.9074811863656486,
+      "tok_recall": 0.9164059007599463,
+      "tok_f1": 0.9119217081850535,
+      "edit_precision": 0.6977985323549033,
+      "edit_recall": 0.7381792519407199,
+      "edit_f05": 0.7055173344125185,
+      "cer_before": 0.050692317933697245,
+      "cer_after": 0.015244308347756624,
+      "wer_before": 0.1601146601146601,
+      "wer_after": 0.04327054327054327,
+      "exact_match": 0.5,
+      "exact_match_input": 0.2,
+      "clean_sentences": 160,
+      "clean_kept_rate": 0.7375,
+      "overcorrected_clean": 42,
+      "expressive_tokens_lost": 0,
+      "exact_by_error_type": {
+        "abbreviation": 0.875,
+        "mixed": 0.39215686274509803,
+        "none": 0.7375,
+        "spelling": 0.4754601226993865
+      },
+      "count_by_error_type": {
+        "abbreviation": 8,
+        "mixed": 306,
+        "none": 160,
+        "spelling": 326
+      },
+      "exact_by_style": {
+        "formal": 0.514,
+        "informal": 0.4766666666666667
+      },
+      "raw_exact_match": 0.49875
+    },
+    "experimental": {
+      "n": 800,
+      "sent_precision": 0.9748822605965463,
+      "sent_recall": 0.9703125,
+      "sent_f1": 0.9725920125293657,
+      "tok_precision": 0.9415041782729805,
+      "tok_recall": 0.9065713008493518,
+      "tok_f1": 0.9237075836939195,
+      "edit_precision": 0.71890372452565,
+      "edit_recall": 0.7219477769936485,
+      "edit_f05": 0.7195104796736532,
+      "cer_before": 0.050692317933697245,
+      "cer_after": 0.014395553188656637,
+      "wer_before": 0.1601146601146601,
+      "wer_after": 0.038902538902538905,
+      "exact_match": 0.5825,
+      "exact_match_input": 0.2,
+      "clean_sentences": 160,
+      "clean_kept_rate": 0.9,
+      "overcorrected_clean": 16,
+      "expressive_tokens_lost": 0,
+      "exact_by_error_type": {
+        "abbreviation": 1.0,
+        "mixed": 0.4542483660130719,
+        "none": 0.9,
+        "spelling": 0.5368098159509203
+      },
+      "count_by_error_type": {
+        "abbreviation": 8,
+        "mixed": 306,
+        "none": 160,
+        "spelling": 326
+      },
+      "exact_by_style": {
+        "formal": 0.506,
+        "informal": 0.71
+      },
+      "raw_exact_match": 0.58125
+    },
+    "no_lexicon": {
+      "n": 800,
+      "sent_precision": 0.9749216300940439,
+      "sent_recall": 0.971875,
+      "sent_f1": 0.97339593114241,
+      "tok_precision": 0.9451733833177132,
+      "tok_recall": 0.9016540008940546,
+      "tok_f1": 0.9229009380004576,
+      "edit_precision": 0.7205882352941176,
+      "edit_recall": 0.726182074805928,
+      "edit_f05": 0.7217000981904895,
+      "cer_before": 0.050692317933697245,
+      "cer_after": 0.014195846092397817,
+      "wer_before": 0.1601146601146601,
+      "wer_after": 0.038834288834288834,
+      "exact_match": 0.5825,
+      "exact_match_input": 0.2,
+      "clean_sentences": 160,
+      "clean_kept_rate": 0.9,
+      "overcorrected_clean": 16,
+      "expressive_tokens_lost": 0,
+      "exact_by_error_type": {
+        "abbreviation": 1.0,
+        "mixed": 0.4542483660130719,
+        "none": 0.9,
+        "spelling": 0.5368098159509203
+      },
+      "count_by_error_type": {
+        "abbreviation": 8,
+        "mixed": 306,
+        "none": 160,
+        "spelling": 326
+      },
+      "exact_by_style": {
+        "formal": 0.508,
+        "informal": 0.7066666666666667
+      },
+      "raw_exact_match": 0.58125
+    },
+    "details": {
+      "protected_span_violations": 0,
+      "legacy_only_exact": 7,
+      "experimental_only_exact": 73,
+      "changed_vs_legacy": 152,
+      "accepted_edits": 2224,
+      "blocked_edits": 66,
+      "proposed_edits": 2290,
+      "candidate_pool_gold": 521,
+      "top3_gold": 507,
+      "keep_original_is_gold": 160,
+      "candidate_pool_gold_rate": 0.65125,
+      "top3_gold_rate": 0.63375,
+      "auto_acceptance_rate": 0.97117903930131,
+      "latency_ms": {
+        "p50": 13.627624495711643,
+        "p95": 31.826042002649046,
+        "mean": 15.86778928996864
+      }
+    },
+    "grid": [
+      {
+        "policy": {
+          "realword_margin": 0.0,
+          "sentence_margin": 0.0
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.974960876369327,
+          "sent_recall": 0.9734375,
+          "sent_f1": 0.9741985926505082,
+          "tok_precision": 0.9411764705882353,
+          "tok_recall": 0.9083594099240053,
+          "tok_f1": 0.924476797088262,
+          "edit_precision": 0.7177871148459384,
+          "edit_recall": 0.7233592095977417,
+          "edit_f05": 0.718894655631926,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.014295699640527227,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.038834288834288834,
+          "exact_match": 0.5825,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4542483660130719,
+            "none": 0.9,
+            "spelling": 0.5368098159509203
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.506,
+            "informal": 0.71
+          },
+          "raw_exact_match": 0.58125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 0.0,
+          "sentence_margin": 0.05
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.974960876369327,
+          "sent_recall": 0.9734375,
+          "sent_f1": 0.9741985926505082,
+          "tok_precision": 0.9411219286045434,
+          "tok_recall": 0.9074653553866786,
+          "tok_f1": 0.9239872553482021,
+          "edit_precision": 0.717391304347826,
+          "edit_recall": 0.7219477769936485,
+          "edit_f05": 0.7182979918550765,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.014428837704699774,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.03897078897078897,
+          "exact_match": 0.5825,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4542483660130719,
+            "none": 0.9,
+            "spelling": 0.5368098159509203
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.506,
+            "informal": 0.71
+          },
+          "raw_exact_match": 0.58125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 0.0,
+          "sentence_margin": 0.15
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748822605965463,
+          "sent_recall": 0.9703125,
+          "sent_f1": 0.9725920125293657,
+          "tok_precision": 0.9415041782729805,
+          "tok_recall": 0.9065713008493518,
+          "tok_f1": 0.9237075836939195,
+          "edit_precision": 0.71890372452565,
+          "edit_recall": 0.7219477769936485,
+          "edit_f05": 0.7195104796736532,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.014395553188656637,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.038902538902538905,
+          "exact_match": 0.5825,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4542483660130719,
+            "none": 0.9,
+            "spelling": 0.5368098159509203
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.506,
+            "informal": 0.71
+          },
+          "raw_exact_match": 0.58125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 1.0,
+          "sentence_margin": 0.0
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.974960876369327,
+          "sent_recall": 0.9734375,
+          "sent_f1": 0.9741985926505082,
+          "tok_precision": 0.9410926365795724,
+          "tok_recall": 0.8855610192221726,
+          "tok_f1": 0.9124827268539843,
+          "edit_precision": 0.6891798759476223,
+          "edit_recall": 0.7057163020465773,
+          "edit_f05": 0.6924248719013987,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.015111170283584077,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.042042042042042045,
+          "exact_match": 0.5725,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4444444444444444,
+            "none": 0.9,
+            "spelling": 0.5214723926380368
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6933333333333334
+          },
+          "raw_exact_match": 0.57125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 1.0,
+          "sentence_margin": 0.05
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.974960876369327,
+          "sent_recall": 0.9734375,
+          "sent_f1": 0.9741985926505082,
+          "tok_precision": 0.9410366143604375,
+          "tok_recall": 0.8846669646848457,
+          "tok_f1": 0.9119815668202765,
+          "edit_precision": 0.6887508626639062,
+          "edit_recall": 0.7043048694424842,
+          "edit_f05": 0.691806460557327,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.015244308347756624,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.04217854217854218,
+          "exact_match": 0.5725,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4444444444444444,
+            "none": 0.9,
+            "spelling": 0.5214723926380368
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6933333333333334
+          },
+          "raw_exact_match": 0.57125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 1.0,
+          "sentence_margin": 0.15
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748822605965463,
+          "sent_recall": 0.9703125,
+          "sent_f1": 0.9725920125293657,
+          "tok_precision": 0.9414285714285714,
+          "tok_recall": 0.883772910147519,
+          "tok_f1": 0.9116901083698409,
+          "edit_precision": 0.690179806362379,
+          "edit_recall": 0.7043048694424842,
+          "edit_f05": 0.6929593112067769,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.015211023831713487,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.04211029211029211,
+          "exact_match": 0.5725,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4444444444444444,
+            "none": 0.9,
+            "spelling": 0.5214723926380368
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6933333333333334
+          },
+          "raw_exact_match": 0.57125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 2.0,
+          "sentence_margin": 0.0
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.974960876369327,
+          "sent_recall": 0.9734375,
+          "sent_f1": 0.9741985926505082,
+          "tok_precision": 0.9433681073025335,
+          "tok_recall": 0.8489047831917746,
+          "tok_f1": 0.8936470588235293,
+          "edit_precision": 0.6543624161073825,
+          "edit_recall": 0.6880733944954128,
+          "edit_f05": 0.6608377389182595,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.01609306350685661,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.046000546000546004,
+          "exact_match": 0.55875,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.434640522875817,
+            "none": 0.9,
+            "spelling": 0.49693251533742333
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.492,
+            "informal": 0.67
+          },
+          "raw_exact_match": 0.5575
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 2.0,
+          "sentence_margin": 0.05
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.974960876369327,
+          "sent_recall": 0.9734375,
+          "sent_f1": 0.9741985926505082,
+          "tok_precision": 0.9433117851815017,
+          "tok_recall": 0.8480107286544479,
+          "tok_f1": 0.893126177024482,
+          "edit_precision": 0.6538978494623656,
+          "edit_recall": 0.6866619618913197,
+          "edit_f05": 0.6601981272899987,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.016226201571029157,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.04613704613704614,
+          "exact_match": 0.55875,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.434640522875817,
+            "none": 0.9,
+            "spelling": 0.49693251533742333
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.492,
+            "informal": 0.67
+          },
+          "raw_exact_match": 0.5575
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 2.0,
+          "sentence_margin": 0.15
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748822605965463,
+          "sent_recall": 0.9703125,
+          "sent_f1": 0.9725920125293657,
+          "tok_precision": 0.9437250996015937,
+          "tok_recall": 0.8471166741171211,
+          "tok_f1": 0.8928150765606595,
+          "edit_precision": 0.6552188552188553,
+          "edit_recall": 0.6866619618913197,
+          "edit_f05": 0.6612749762131304,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.01619291705498602,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.04606879606879607,
+          "exact_match": 0.55875,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.434640522875817,
+            "none": 0.9,
+            "spelling": 0.49693251533742333
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.492,
+            "informal": 0.67
+          },
+          "raw_exact_match": 0.5575
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 4.0,
+          "sentence_margin": 0.0
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748427672955975,
+          "sent_recall": 0.96875,
+          "sent_f1": 0.9717868338557993,
+          "tok_precision": 0.9494079655543596,
+          "tok_recall": 0.7885561019222173,
+          "tok_f1": 0.8615384615384616,
+          "edit_precision": 0.6341301460823373,
+          "edit_recall": 0.6739590684544813,
+          "edit_f05": 0.6417148232764414,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.017907069631207563,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.05262080262080262,
+          "exact_match": 0.5575,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.43790849673202614,
+            "none": 0.9,
+            "spelling": 0.49079754601226994
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6533333333333333
+          },
+          "raw_exact_match": 0.55625
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 4.0,
+          "sentence_margin": 0.05
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748427672955975,
+          "sent_recall": 0.96875,
+          "sent_f1": 0.9717868338557993,
+          "tok_precision": 0.9493534482758621,
+          "tok_recall": 0.7876620473848904,
+          "tok_f1": 0.8609821646713902,
+          "edit_precision": 0.6336436170212766,
+          "edit_recall": 0.6725476358503881,
+          "edit_f05": 0.6410601372258846,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.01804020769538011,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.052757302757302754,
+          "exact_match": 0.5575,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.43790849673202614,
+            "none": 0.9,
+            "spelling": 0.49079754601226994
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6533333333333333
+          },
+          "raw_exact_match": 0.55625
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 4.0,
+          "sentence_margin": 0.15
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748031496062992,
+          "sent_recall": 0.9671875,
+          "sent_f1": 0.9709803921568627,
+          "tok_precision": 0.9493261455525607,
+          "tok_recall": 0.7872150201162271,
+          "tok_f1": 0.8607038123167156,
+          "edit_precision": 0.6340652029274784,
+          "edit_recall": 0.6725476358503881,
+          "edit_f05": 0.6414053035401804,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.01804020769538011,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.052757302757302754,
+          "exact_match": 0.5575,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.43790849673202614,
+            "none": 0.9,
+            "spelling": 0.49079754601226994
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6533333333333333
+          },
+          "raw_exact_match": 0.55625
+        }
+      }
+    ],
+    "no_lexicon_grid": [
+      {
+        "policy": {
+          "realword_margin": 0.0,
+          "sentence_margin": 0.0
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9451733833177132,
+          "tok_recall": 0.9016540008940546,
+          "tok_f1": 0.9229009380004576,
+          "edit_precision": 0.7205882352941176,
+          "edit_recall": 0.726182074805928,
+          "edit_f05": 0.7217000981904895,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.014195846092397817,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.038834288834288834,
+          "exact_match": 0.5825,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4542483660130719,
+            "none": 0.9,
+            "spelling": 0.5368098159509203
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.508,
+            "informal": 0.7066666666666667
+          },
+          "raw_exact_match": 0.58125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 0.0,
+          "sentence_margin": 0.05
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9451219512195121,
+          "tok_recall": 0.9007599463567277,
+          "tok_f1": 0.9224078736552986,
+          "edit_precision": 0.7201963534361852,
+          "edit_recall": 0.7247706422018348,
+          "edit_f05": 0.7211065861536301,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.014328984156570364,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.03897078897078897,
+          "exact_match": 0.5825,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4542483660130719,
+            "none": 0.9,
+            "spelling": 0.5368098159509203
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.508,
+            "informal": 0.7066666666666667
+          },
+          "raw_exact_match": 0.58125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 0.0,
+          "sentence_margin": 0.15
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9455654622243078,
+          "tok_recall": 0.9007599463567277,
+          "tok_f1": 0.9226190476190476,
+          "edit_precision": 0.720701754385965,
+          "edit_recall": 0.7247706422018348,
+          "edit_f05": 0.7215118729801884,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.014312341898548795,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.038902538902538905,
+          "exact_match": 0.5825,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4542483660130719,
+            "none": 0.9,
+            "spelling": 0.5368098159509203
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.508,
+            "informal": 0.7066666666666667
+          },
+          "raw_exact_match": 0.58125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 1.0,
+          "sentence_margin": 0.0
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9443645083932853,
+          "tok_recall": 0.8801966919982119,
+          "tok_f1": 0.911152244331328,
+          "edit_precision": 0.6920962199312715,
+          "edit_recall": 0.7106563161609033,
+          "edit_f05": 0.6957302749758189,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.014994674477433098,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.0419055419055419,
+          "exact_match": 0.5725,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4444444444444444,
+            "none": 0.9,
+            "spelling": 0.5214723926380368
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.502,
+            "informal": 0.69
+          },
+          "raw_exact_match": 0.57125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 1.0,
+          "sentence_margin": 0.05
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9443110897743638,
+          "tok_recall": 0.8793026374608851,
+          "tok_f1": 0.9106481481481481,
+          "edit_precision": 0.6916724019270475,
+          "edit_recall": 0.7092448835568101,
+          "edit_f05": 0.6951168903029464,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.015127812541605645,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.042042042042042045,
+          "exact_match": 0.5725,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4444444444444444,
+            "none": 0.9,
+            "spelling": 0.5214723926380368
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.502,
+            "informal": 0.69
+          },
+          "raw_exact_match": 0.57125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 1.0,
+          "sentence_margin": 0.15
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9447646493756003,
+          "tok_recall": 0.8793026374608851,
+          "tok_f1": 0.9108589951377634,
+          "edit_precision": 0.6921487603305785,
+          "edit_recall": 0.7092448835568101,
+          "edit_f05": 0.6955017301038062,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.015111170283584077,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.041973791973791974,
+          "exact_match": 0.5725,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.4444444444444444,
+            "none": 0.9,
+            "spelling": 0.5214723926380368
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.502,
+            "informal": 0.69
+          },
+          "raw_exact_match": 0.57125
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 2.0,
+          "sentence_margin": 0.0
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9453008453505719,
+          "tok_recall": 0.8497988377291015,
+          "tok_f1": 0.8950094161958569,
+          "edit_precision": 0.6601746138347885,
+          "edit_recall": 0.6937191249117854,
+          "edit_f05": 0.6666214566662146,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.01590999866861936,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.04559104559104559,
+          "exact_match": 0.56,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.434640522875817,
+            "none": 0.9,
+            "spelling": 0.5
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.494,
+            "informal": 0.67
+          },
+          "raw_exact_match": 0.55875
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 2.0,
+          "sentence_margin": 0.05
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9452463912394226,
+          "tok_recall": 0.8489047831917746,
+          "tok_f1": 0.8944889307583607,
+          "edit_precision": 0.6597175521183591,
+          "edit_recall": 0.6923076923076923,
+          "edit_f05": 0.6659877800407332,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.016043136732791907,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.045727545727545726,
+          "exact_match": 0.56,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.434640522875817,
+            "none": 0.9,
+            "spelling": 0.5
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.494,
+            "informal": 0.67
+          },
+          "raw_exact_match": 0.55875
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 2.0,
+          "sentence_margin": 0.15
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9749216300940439,
+          "sent_recall": 0.971875,
+          "sent_f1": 0.97339593114241,
+          "tok_precision": 0.9457171314741036,
+          "tok_recall": 0.8489047831917746,
+          "tok_f1": 0.8946996466431095,
+          "edit_precision": 0.6601615074024226,
+          "edit_recall": 0.6923076923076923,
+          "edit_f05": 0.6663496807498981,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.016026494474770336,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.04565929565929566,
+          "exact_match": 0.56,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.434640522875817,
+            "none": 0.9,
+            "spelling": 0.5
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.494,
+            "informal": 0.67
+          },
+          "raw_exact_match": 0.55875
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 4.0,
+          "sentence_margin": 0.0
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748427672955975,
+          "sent_recall": 0.96875,
+          "sent_f1": 0.9717868338557993,
+          "tok_precision": 0.9495708154506438,
+          "tok_recall": 0.7912382655341976,
+          "tok_f1": 0.8632040965618142,
+          "edit_precision": 0.6362433862433863,
+          "edit_recall": 0.6788990825688074,
+          "edit_f05": 0.6443402545210984,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.01772400479297031,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.05221130221130221,
+          "exact_match": 0.5575,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.43790849673202614,
+            "none": 0.9,
+            "spelling": 0.49079754601226994
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6533333333333333
+          },
+          "raw_exact_match": 0.55625
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 4.0,
+          "sentence_margin": 0.05
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748427672955975,
+          "sent_recall": 0.96875,
+          "sent_f1": 0.9717868338557993,
+          "tok_precision": 0.949516648764769,
+          "tok_recall": 0.7903442109968708,
+          "tok_f1": 0.8626494266894364,
+          "edit_precision": 0.6357615894039735,
+          "edit_recall": 0.6774876499647142,
+          "edit_f05": 0.6436904921550222,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.017857142857142856,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.05234780234780235,
+          "exact_match": 0.5575,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.43790849673202614,
+            "none": 0.9,
+            "spelling": 0.49079754601226994
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6533333333333333
+          },
+          "raw_exact_match": 0.55625
+        }
+      },
+      {
+        "policy": {
+          "realword_margin": 4.0,
+          "sentence_margin": 0.15
+        },
+        "metrics": {
+          "n": 800,
+          "sent_precision": 0.9748427672955975,
+          "sent_recall": 0.96875,
+          "sent_f1": 0.9717868338557993,
+          "tok_precision": 0.949516648764769,
+          "tok_recall": 0.7903442109968708,
+          "tok_f1": 0.8626494266894364,
+          "edit_precision": 0.6357615894039735,
+          "edit_recall": 0.6774876499647142,
+          "edit_f05": 0.6436904921550222,
+          "cer_before": 0.050692317933697245,
+          "cer_after": 0.017857142857142856,
+          "wer_before": 0.1601146601146601,
+          "wer_after": 0.05234780234780235,
+          "exact_match": 0.5575,
+          "exact_match_input": 0.2,
+          "clean_sentences": 160,
+          "clean_kept_rate": 0.9,
+          "overcorrected_clean": 16,
+          "expressive_tokens_lost": 0,
+          "exact_by_error_type": {
+            "abbreviation": 1.0,
+            "mixed": 0.43790849673202614,
+            "none": 0.9,
+            "spelling": 0.49079754601226994
+          },
+          "count_by_error_type": {
+            "abbreviation": 8,
+            "mixed": 306,
+            "none": 160,
+            "spelling": 326
+          },
+          "exact_by_style": {
+            "formal": 0.5,
+            "informal": 0.6533333333333333
+          },
+          "raw_exact_match": 0.55625
+        }
+      }
+    ]
+  },
+  "train_sample": {
+    "provenance": {
+      "population_records": 21727,
+      "population_tokens": 400002,
+      "sample_size": 400,
+      "seed": 42,
+      "purpose": "Descriptive in-sample score, not used in selection and not proof of no overfitting."
+    },
+    "legacy": {
+      "n": 400,
+      "sent_precision": 0.9625,
+      "sent_recall": 0.9746835443037974,
+      "sent_f1": 0.9685534591194969,
+      "tok_precision": 0.9664429530201343,
+      "tok_recall": 0.9282836422240129,
+      "tok_f1": 0.9469790382244143,
+      "edit_precision": 0.7891156462585034,
+      "edit_recall": 0.774365821094793,
+      "edit_f05": 0.7861208999728925,
+      "cer_before": 0.04394470246340205,
+      "cer_after": 0.010021999511121975,
+      "wer_before": 0.14970611962659905,
+      "wer_after": 0.027659329261265415,
+      "exact_match": 0.615,
+      "exact_match_input": 0.21,
+      "clean_sentences": 84,
+      "clean_kept_rate": 0.8571428571428571,
+      "overcorrected_clean": 12,
+      "expressive_tokens_lost": 0,
+      "exact_by_error_type": {
+        "abbreviation": 1.0,
+        "mixed": 0.4897959183673469,
+        "none": 0.8571428571428571,
+        "spelling": 0.6011904761904762
+      },
+      "count_by_error_type": {
+        "abbreviation": 1,
+        "mixed": 147,
+        "none": 84,
+        "spelling": 168
+      },
+      "exact_by_style": {
+        "formal": 0.6136363636363636,
+        "informal": 0.75
+      },
+      "raw_exact_match": 0.615
+    },
+    "experimental": {
+      "n": 400,
+      "sent_precision": 0.9685534591194969,
+      "sent_recall": 0.9746835443037974,
+      "sent_f1": 0.9716088328075709,
+      "tok_precision": 0.9602032176121931,
+      "tok_recall": 0.9137792103142627,
+      "tok_f1": 0.9364161849710982,
+      "edit_precision": 0.7509986684420772,
+      "edit_recall": 0.753004005340454,
+      "edit_f05": 0.7513988808952837,
+      "cer_before": 0.04394470246340205,
+      "cer_after": 0.010619517097150928,
+      "wer_before": 0.14970611962659905,
+      "wer_after": 0.030310014982136684,
+      "exact_match": 0.605,
+      "exact_match_input": 0.21,
+      "clean_sentences": 84,
+      "clean_kept_rate": 0.8809523809523809,
+      "overcorrected_clean": 10,
+      "expressive_tokens_lost": 0,
+      "exact_by_error_type": {
+        "abbreviation": 1.0,
+        "mixed": 0.48299319727891155,
+        "none": 0.8809523809523809,
+        "spelling": 0.5714285714285714
+      },
+      "count_by_error_type": {
+        "abbreviation": 1,
+        "mixed": 147,
+        "none": 84,
+        "spelling": 168
+      },
+      "exact_by_style": {
+        "formal": 0.6035353535353535,
+        "informal": 0.75
+      },
+      "raw_exact_match": 0.605
+    },
+    "details": {
+      "protected_span_violations": 0,
+      "legacy_only_exact": 6,
+      "experimental_only_exact": 2,
+      "changed_vs_legacy": 35,
+      "accepted_edits": 1223,
+      "blocked_edits": 40,
+      "proposed_edits": 1263,
+      "candidate_pool_gold": 270,
+      "top3_gold": 259,
+      "keep_original_is_gold": 84,
+      "candidate_pool_gold_rate": 0.675,
+      "top3_gold_rate": 0.6475,
+      "auto_acceptance_rate": 0.9683293745051464,
+      "latency_ms": {
+        "p50": 16.26689599652309,
+        "p95": 29.53654099837877,
+        "mean": 17.334664299596625
+      }
+    }
+  }
+}
