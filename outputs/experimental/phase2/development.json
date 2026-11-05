@@ -1,0 +1,1011 @@
+{
+  "legacy": {
+    "n": 800,
+    "sent_precision": 0.937125748502994,
+    "sent_recall": 0.978125,
+    "sent_f1": 0.9571865443425076,
+    "tok_precision": 0.9074811863656486,
+    "tok_recall": 0.9164059007599463,
+    "tok_f1": 0.9119217081850535,
+    "edit_precision": 0.6977985323549033,
+    "edit_recall": 0.7381792519407199,
+    "edit_f05": 0.7055173344125185,
+    "cer_before": 0.050692317933697245,
+    "cer_after": 0.015244308347756624,
+    "wer_before": 0.1601146601146601,
+    "wer_after": 0.04327054327054327,
+    "exact_match": 0.5,
+    "exact_match_input": 0.2,
+    "clean_sentences": 160,
+    "clean_kept_rate": 0.7375,
+    "overcorrected_clean": 42,
+    "expressive_tokens_lost": 0,
+    "exact_by_error_type": {
+      "abbreviation": 0.875,
+      "mixed": 0.39215686274509803,
+      "none": 0.7375,
+      "spelling": 0.4754601226993865
+    },
+    "count_by_error_type": {
+      "abbreviation": 8,
+      "mixed": 306,
+      "none": 160,
+      "spelling": 326
+    },
+    "exact_by_style": {
+      "formal": 0.514,
+      "informal": 0.4766666666666667
+    },
+    "raw_exact_match": 0.49875
+  },
+  "phase2": {
+    "n": 800,
+    "sent_precision": 0.974960876369327,
+    "sent_recall": 0.9734375,
+    "sent_f1": 0.9741985926505082,
+    "tok_precision": 0.9451990632318501,
+    "tok_recall": 0.902101028162718,
+    "tok_f1": 0.9231473010064044,
+    "edit_precision": 0.7207837648705389,
+    "edit_recall": 0.7268877911079746,
+    "edit_f05": 0.7219963549698585,
+    "cer_before": 0.050692317933697245,
+    "cer_after": 0.014145919318333111,
+    "wer_before": 0.1601146601146601,
+    "wer_after": 0.03876603876603876,
+    "exact_match": 0.5825,
+    "exact_match_input": 0.2,
+    "clean_sentences": 160,
+    "clean_kept_rate": 0.9,
+    "overcorrected_clean": 16,
+    "expressive_tokens_lost": 0,
+    "exact_by_error_type": {
+      "abbreviation": 1.0,
+      "mixed": 0.4542483660130719,
+      "none": 0.9,
+      "spelling": 0.5368098159509203
+    },
+    "count_by_error_type": {
+      "abbreviation": 8,
+      "mixed": 306,
+      "none": 160,
+      "spelling": 326
+    },
+    "exact_by_style": {
+      "formal": 0.508,
+      "informal": 0.7066666666666667
+    },
+    "raw_exact_match": 0.58125
+  },
+  "margin_grid": [
+    {
+      "margin": 0.0,
+      "metrics": {
+        "n": 800,
+        "sent_precision": 0.974960876369327,
+        "sent_recall": 0.9734375,
+        "sent_f1": 0.9741985926505082,
+        "tok_precision": 0.9451990632318501,
+        "tok_recall": 0.902101028162718,
+        "tok_f1": 0.9231473010064044,
+        "edit_precision": 0.7207837648705389,
+        "edit_recall": 0.7268877911079746,
+        "edit_f05": 0.7219963549698585,
+        "cer_before": 0.050692317933697245,
+        "cer_after": 0.014145919318333111,
+        "wer_before": 0.1601146601146601,
+        "wer_after": 0.03876603876603876,
+        "exact_match": 0.5825,
+        "exact_match_input": 0.2,
+        "clean_sentences": 160,
+        "clean_kept_rate": 0.9,
+        "overcorrected_clean": 16,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "mixed": 0.4542483660130719,
+          "none": 0.9,
+          "spelling": 0.5368098159509203
+        },
+        "count_by_error_type": {
+          "abbreviation": 8,
+          "mixed": 306,
+          "none": 160,
+          "spelling": 326
+        },
+        "exact_by_style": {
+          "formal": 0.508,
+          "informal": 0.7066666666666667
+        },
+        "raw_exact_match": 0.58125
+      }
+    },
+    {
+      "margin": 1.0,
+      "metrics": {
+        "n": 800,
+        "sent_precision": 0.974960876369327,
+        "sent_recall": 0.9734375,
+        "sent_f1": 0.9741985926505082,
+        "tok_precision": 0.9443911792905082,
+        "tok_recall": 0.8806437192668752,
+        "tok_f1": 0.9114041175109878,
+        "edit_precision": 0.6923076923076923,
+        "edit_recall": 0.7113620324629499,
+        "edit_f05": 0.6960364590526171,
+        "cer_before": 0.050692317933697245,
+        "cer_after": 0.014944747703368393,
+        "wer_before": 0.1601146601146601,
+        "wer_after": 0.04183729183729184,
+        "exact_match": 0.5725,
+        "exact_match_input": 0.2,
+        "clean_sentences": 160,
+        "clean_kept_rate": 0.9,
+        "overcorrected_clean": 16,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "mixed": 0.4444444444444444,
+          "none": 0.9,
+          "spelling": 0.5214723926380368
+        },
+        "count_by_error_type": {
+          "abbreviation": 8,
+          "mixed": 306,
+          "none": 160,
+          "spelling": 326
+        },
+        "exact_by_style": {
+          "formal": 0.502,
+          "informal": 0.69
+        },
+        "raw_exact_match": 0.57125
+      }
+    },
+    {
+      "margin": 2.0,
+      "metrics": {
+        "n": 800,
+        "sent_precision": 0.974960876369327,
+        "sent_recall": 0.9734375,
+        "sent_f1": 0.9741985926505082,
+        "tok_precision": 0.9453280318091452,
+        "tok_recall": 0.8502458649977649,
+        "tok_f1": 0.8952694751706284,
+        "edit_precision": 0.6604026845637584,
+        "edit_recall": 0.6944248412138321,
+        "edit_f05": 0.6669377795851973,
+        "cer_before": 0.050692317933697245,
+        "cer_after": 0.015860071894554652,
+        "wer_before": 0.1601146601146601,
+        "wer_after": 0.04552279552279552,
+        "exact_match": 0.56,
+        "exact_match_input": 0.2,
+        "clean_sentences": 160,
+        "clean_kept_rate": 0.9,
+        "overcorrected_clean": 16,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "mixed": 0.434640522875817,
+          "none": 0.9,
+          "spelling": 0.5
+        },
+        "count_by_error_type": {
+          "abbreviation": 8,
+          "mixed": 306,
+          "none": 160,
+          "spelling": 326
+        },
+        "exact_by_style": {
+          "formal": 0.494,
+          "informal": 0.67
+        },
+        "raw_exact_match": 0.55875
+      }
+    },
+    {
+      "margin": 4.0,
+      "metrics": {
+        "n": 800,
+        "sent_precision": 0.9748822605965463,
+        "sent_recall": 0.9703125,
+        "sent_f1": 0.9725920125293657,
+        "tok_precision": 0.9495978552278821,
+        "tok_recall": 0.7916852928028609,
+        "tok_f1": 0.863481228668942,
+        "edit_precision": 0.6364838070059484,
+        "edit_recall": 0.6796047988708539,
+        "edit_f05": 0.6446646137367787,
+        "cer_before": 0.050692317933697245,
+        "cer_after": 0.017674078018905606,
+        "wer_before": 0.1601146601146601,
+        "wer_after": 0.05214305214305214,
+        "exact_match": 0.5575,
+        "exact_match_input": 0.2,
+        "clean_sentences": 160,
+        "clean_kept_rate": 0.9,
+        "overcorrected_clean": 16,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "mixed": 0.43790849673202614,
+          "none": 0.9,
+          "spelling": 0.49079754601226994
+        },
+        "count_by_error_type": {
+          "abbreviation": 8,
+          "mixed": 306,
+          "none": 160,
+          "spelling": 326
+        },
+        "exact_by_style": {
+          "formal": 0.5,
+          "informal": 0.6533333333333333
+        },
+        "raw_exact_match": 0.55625
+      }
+    },
+    {
+      "margin": 8.0,
+      "metrics": {
+        "n": 800,
+        "sent_precision": 0.9823151125401929,
+        "sent_recall": 0.9546875,
+        "sent_f1": 0.9683042789223455,
+        "tok_precision": 0.9609817495280051,
+        "tok_recall": 0.6826106392489942,
+        "tok_f1": 0.7982226868792474,
+        "edit_precision": 0.6315422191207257,
+        "edit_recall": 0.6386732533521524,
+        "edit_f05": 0.6329556581340048,
+        "cer_before": 0.050692317933697245,
+        "cer_after": 0.02126880575156437,
+        "wer_before": 0.1601146601146601,
+        "wer_after": 0.0644963144963145,
+        "exact_match": 0.55,
+        "exact_match_input": 0.2,
+        "clean_sentences": 160,
+        "clean_kept_rate": 0.93125,
+        "overcorrected_clean": 11,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "mixed": 0.42810457516339867,
+          "none": 0.93125,
+          "spelling": 0.4662576687116564
+        },
+        "count_by_error_type": {
+          "abbreviation": 8,
+          "mixed": 306,
+          "none": 160,
+          "spelling": 326
+        },
+        "exact_by_style": {
+          "formal": 0.502,
+          "informal": 0.63
+        },
+        "raw_exact_match": 0.54875
+      }
+    }
+  ],
+  "context_grid": [
+    {
+      "weight": 0.0,
+      "ranking": {
+        "n": 8,
+        "accuracy": 0.5,
+        "contrast_pairs_both_correct": 0,
+        "n_contrast_pairs": 4,
+        "predictions": [
+          {
+            "id": "dev-ban-sale",
+            "group": "ban",
+            "predicted": "Tôi muốn bán thêm.",
+            "target": "Tôi muốn bán thêm.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi muốn bán thêm.",
+                "local_score": -6.983367599279767,
+                "context_score": 0.03944459557533264,
+                "score": -6.983367599279767
+              },
+              {
+                "text": "Tôi muốn bàn thêm.",
+                "local_score": -7.635405446761101,
+                "context_score": 0.0,
+                "score": -7.635405446761101
+              }
+            ]
+          },
+          {
+            "id": "dev-ban-discuss",
+            "group": "ban",
+            "predicted": "Tôi muốn bán thêm.",
+            "target": "Tôi muốn bàn thêm.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi muốn bán thêm.",
+                "local_score": -6.983367599279767,
+                "context_score": 0.0,
+                "score": -6.983367599279767
+              },
+              {
+                "text": "Tôi muốn bàn thêm.",
+                "local_score": -7.635405446761101,
+                "context_score": 0.008667555637657642,
+                "score": -7.635405446761101
+              }
+            ]
+          },
+          {
+            "id": "dev-bo-cattle",
+            "group": "bo",
+            "predicted": "Tôi mua bò.",
+            "target": "Tôi mua bò.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi mua bò.",
+                "local_score": -7.609370167005186,
+                "context_score": 0.054849911481142044,
+                "score": -7.609370167005186
+              },
+              {
+                "text": "Tôi mua bơ.",
+                "local_score": -8.842773572576437,
+                "context_score": 0.0,
+                "score": -8.842773572576437
+              }
+            ]
+          },
+          {
+            "id": "dev-bo-butter",
+            "group": "bo",
+            "predicted": "Tôi mua bò.",
+            "target": "Tôi mua bơ.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi mua bò.",
+                "local_score": -7.609370167005186,
+                "context_score": 0.025841660797595978,
+                "score": -7.609370167005186
+              },
+              {
+                "text": "Tôi mua bơ.",
+                "local_score": -8.842773572576437,
+                "context_score": 0.023384056985378265,
+                "score": -8.842773572576437
+              }
+            ]
+          },
+          {
+            "id": "dev-ca-shift",
+            "group": "ca",
+            "predicted": "Tôi chọn ca.",
+            "target": "Tôi chọn ca.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi chọn ca.",
+                "local_score": -7.209714238882454,
+                "context_score": 0.010366619564592838,
+                "score": -7.209714238882454
+              },
+              {
+                "text": "Tôi chọn cá.",
+                "local_score": -8.4681157779183,
+                "context_score": 0.0,
+                "score": -8.4681157779183
+              }
+            ]
+          },
+          {
+            "id": "dev-ca-fish",
+            "group": "ca",
+            "predicted": "Tôi chọn ca.",
+            "target": "Tôi chọn cá.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi chọn ca.",
+                "local_score": -7.209714238882454,
+                "context_score": 0.0,
+                "score": -7.209714238882454
+              },
+              {
+                "text": "Tôi chọn cá.",
+                "local_score": -8.4681157779183,
+                "context_score": 0.06751905381679535,
+                "score": -8.4681157779183
+              }
+            ]
+          },
+          {
+            "id": "dev-co-bird",
+            "group": "co",
+            "predicted": "Tôi thấy cỏ.",
+            "target": "Tôi thấy cò.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi thấy cỏ.",
+                "local_score": -7.255956428148402,
+                "context_score": 0.037033937871456146,
+                "score": -7.255956428148402
+              },
+              {
+                "text": "Tôi thấy cò.",
+                "local_score": -7.868625624156672,
+                "context_score": 0.0,
+                "score": -7.868625624156672
+              }
+            ]
+          },
+          {
+            "id": "dev-co-grass",
+            "group": "co",
+            "predicted": "Tôi thấy cỏ.",
+            "target": "Tôi thấy cỏ.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi thấy cỏ.",
+                "local_score": -7.255956428148402,
+                "context_score": 0.03541010618209839,
+                "score": -7.255956428148402
+              },
+              {
+                "text": "Tôi thấy cò.",
+                "local_score": -7.868625624156672,
+                "context_score": 0.0,
+                "score": -7.868625624156672
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 4.0,
+      "ranking": {
+        "n": 8,
+        "accuracy": 0.5,
+        "contrast_pairs_both_correct": 0,
+        "n_contrast_pairs": 4,
+        "predictions": [
+          {
+            "id": "dev-ban-sale",
+            "group": "ban",
+            "predicted": "Tôi muốn bán thêm.",
+            "target": "Tôi muốn bán thêm.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi muốn bán thêm.",
+                "local_score": -6.983367599279767,
+                "context_score": 0.03944459557533264,
+                "score": -6.825589216978436
+              },
+              {
+                "text": "Tôi muốn bàn thêm.",
+                "local_score": -7.635405446761101,
+                "context_score": 0.0,
+                "score": -7.635405446761101
+              }
+            ]
+          },
+          {
+            "id": "dev-ban-discuss",
+            "group": "ban",
+            "predicted": "Tôi muốn bán thêm.",
+            "target": "Tôi muốn bàn thêm.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi muốn bán thêm.",
+                "local_score": -6.983367599279767,
+                "context_score": 0.0,
+                "score": -6.983367599279767
+              },
+              {
+                "text": "Tôi muốn bàn thêm.",
+                "local_score": -7.635405446761101,
+                "context_score": 0.008667555637657642,
+                "score": -7.60073522421047
+              }
+            ]
+          },
+          {
+            "id": "dev-bo-cattle",
+            "group": "bo",
+            "predicted": "Tôi mua bò.",
+            "target": "Tôi mua bò.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi mua bò.",
+                "local_score": -7.609370167005186,
+                "context_score": 0.054849911481142044,
+                "score": -7.389970521080618
+              },
+              {
+                "text": "Tôi mua bơ.",
+                "local_score": -8.842773572576437,
+                "context_score": 0.0,
+                "score": -8.842773572576437
+              }
+            ]
+          },
+          {
+            "id": "dev-bo-butter",
+            "group": "bo",
+            "predicted": "Tôi mua bò.",
+            "target": "Tôi mua bơ.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi mua bò.",
+                "local_score": -7.609370167005186,
+                "context_score": 0.025841660797595978,
+                "score": -7.506003523814802
+              },
+              {
+                "text": "Tôi mua bơ.",
+                "local_score": -8.842773572576437,
+                "context_score": 0.023384056985378265,
+                "score": -8.749237344634924
+              }
+            ]
+          },
+          {
+            "id": "dev-ca-shift",
+            "group": "ca",
+            "predicted": "Tôi chọn ca.",
+            "target": "Tôi chọn ca.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi chọn ca.",
+                "local_score": -7.209714238882454,
+                "context_score": 0.010366619564592838,
+                "score": -7.168247760624083
+              },
+              {
+                "text": "Tôi chọn cá.",
+                "local_score": -8.4681157779183,
+                "context_score": 0.0,
+                "score": -8.4681157779183
+              }
+            ]
+          },
+          {
+            "id": "dev-ca-fish",
+            "group": "ca",
+            "predicted": "Tôi chọn ca.",
+            "target": "Tôi chọn cá.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi chọn ca.",
+                "local_score": -7.209714238882454,
+                "context_score": 0.0,
+                "score": -7.209714238882454
+              },
+              {
+                "text": "Tôi chọn cá.",
+                "local_score": -8.4681157779183,
+                "context_score": 0.06751905381679535,
+                "score": -8.198039562651118
+              }
+            ]
+          },
+          {
+            "id": "dev-co-bird",
+            "group": "co",
+            "predicted": "Tôi thấy cỏ.",
+            "target": "Tôi thấy cò.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi thấy cỏ.",
+                "local_score": -7.255956428148402,
+                "context_score": 0.037033937871456146,
+                "score": -7.107820676662578
+              },
+              {
+                "text": "Tôi thấy cò.",
+                "local_score": -7.868625624156672,
+                "context_score": 0.0,
+                "score": -7.868625624156672
+              }
+            ]
+          },
+          {
+            "id": "dev-co-grass",
+            "group": "co",
+            "predicted": "Tôi thấy cỏ.",
+            "target": "Tôi thấy cỏ.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi thấy cỏ.",
+                "local_score": -7.255956428148402,
+                "context_score": 0.03541010618209839,
+                "score": -7.114316003420009
+              },
+              {
+                "text": "Tôi thấy cò.",
+                "local_score": -7.868625624156672,
+                "context_score": 0.0,
+                "score": -7.868625624156672
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 16.0,
+      "ranking": {
+        "n": 8,
+        "accuracy": 0.5,
+        "contrast_pairs_both_correct": 0,
+        "n_contrast_pairs": 4,
+        "predictions": [
+          {
+            "id": "dev-ban-sale",
+            "group": "ban",
+            "predicted": "Tôi muốn bán thêm.",
+            "target": "Tôi muốn bán thêm.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi muốn bán thêm.",
+                "local_score": -6.983367599279767,
+                "context_score": 0.03944459557533264,
+                "score": -6.352254070074444
+              },
+              {
+                "text": "Tôi muốn bàn thêm.",
+                "local_score": -7.635405446761101,
+                "context_score": 0.0,
+                "score": -7.635405446761101
+              }
+            ]
+          },
+          {
+            "id": "dev-ban-discuss",
+            "group": "ban",
+            "predicted": "Tôi muốn bán thêm.",
+            "target": "Tôi muốn bàn thêm.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi muốn bán thêm.",
+                "local_score": -6.983367599279767,
+                "context_score": 0.0,
+                "score": -6.983367599279767
+              },
+              {
+                "text": "Tôi muốn bàn thêm.",
+                "local_score": -7.635405446761101,
+                "context_score": 0.008667555637657642,
+                "score": -7.496724556558578
+              }
+            ]
+          },
+          {
+            "id": "dev-bo-cattle",
+            "group": "bo",
+            "predicted": "Tôi mua bò.",
+            "target": "Tôi mua bò.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi mua bò.",
+                "local_score": -7.609370167005186,
+                "context_score": 0.054849911481142044,
+                "score": -6.731771583306913
+              },
+              {
+                "text": "Tôi mua bơ.",
+                "local_score": -8.842773572576437,
+                "context_score": 0.0,
+                "score": -8.842773572576437
+              }
+            ]
+          },
+          {
+            "id": "dev-bo-butter",
+            "group": "bo",
+            "predicted": "Tôi mua bò.",
+            "target": "Tôi mua bơ.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi mua bò.",
+                "local_score": -7.609370167005186,
+                "context_score": 0.025841660797595978,
+                "score": -7.19590359424365
+              },
+              {
+                "text": "Tôi mua bơ.",
+                "local_score": -8.842773572576437,
+                "context_score": 0.023384056985378265,
+                "score": -8.468628660810385
+              }
+            ]
+          },
+          {
+            "id": "dev-ca-shift",
+            "group": "ca",
+            "predicted": "Tôi chọn ca.",
+            "target": "Tôi chọn ca.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi chọn ca.",
+                "local_score": -7.209714238882454,
+                "context_score": 0.010366619564592838,
+                "score": -7.043848325848969
+              },
+              {
+                "text": "Tôi chọn cá.",
+                "local_score": -8.4681157779183,
+                "context_score": 0.0,
+                "score": -8.4681157779183
+              }
+            ]
+          },
+          {
+            "id": "dev-ca-fish",
+            "group": "ca",
+            "predicted": "Tôi chọn ca.",
+            "target": "Tôi chọn cá.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi chọn ca.",
+                "local_score": -7.209714238882454,
+                "context_score": 0.0,
+                "score": -7.209714238882454
+              },
+              {
+                "text": "Tôi chọn cá.",
+                "local_score": -8.4681157779183,
+                "context_score": 0.06751905381679535,
+                "score": -7.387810916849574
+              }
+            ]
+          },
+          {
+            "id": "dev-co-bird",
+            "group": "co",
+            "predicted": "Tôi thấy cỏ.",
+            "target": "Tôi thấy cò.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi thấy cỏ.",
+                "local_score": -7.255956428148402,
+                "context_score": 0.037033937871456146,
+                "score": -6.663413422205104
+              },
+              {
+                "text": "Tôi thấy cò.",
+                "local_score": -7.868625624156672,
+                "context_score": 0.0,
+                "score": -7.868625624156672
+              }
+            ]
+          },
+          {
+            "id": "dev-co-grass",
+            "group": "co",
+            "predicted": "Tôi thấy cỏ.",
+            "target": "Tôi thấy cỏ.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi thấy cỏ.",
+                "local_score": -7.255956428148402,
+                "context_score": 0.03541010618209839,
+                "score": -6.689394729234828
+              },
+              {
+                "text": "Tôi thấy cò.",
+                "local_score": -7.868625624156672,
+                "context_score": 0.0,
+                "score": -7.868625624156672
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 64.0,
+      "ranking": {
+        "n": 8,
+        "accuracy": 0.625,
+        "contrast_pairs_both_correct": 1,
+        "n_contrast_pairs": 4,
+        "predictions": [
+          {
+            "id": "dev-ban-sale",
+            "group": "ban",
+            "predicted": "Tôi muốn bán thêm.",
+            "target": "Tôi muốn bán thêm.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi muốn bán thêm.",
+                "local_score": -6.983367599279767,
+                "context_score": 0.03944459557533264,
+                "score": -4.4589134824584775
+              },
+              {
+                "text": "Tôi muốn bàn thêm.",
+                "local_score": -7.635405446761101,
+                "context_score": 0.0,
+                "score": -7.635405446761101
+              }
+            ]
+          },
+          {
+            "id": "dev-ban-discuss",
+            "group": "ban",
+            "predicted": "Tôi muốn bán thêm.",
+            "target": "Tôi muốn bàn thêm.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi muốn bán thêm.",
+                "local_score": -6.983367599279767,
+                "context_score": 0.0,
+                "score": -6.983367599279767
+              },
+              {
+                "text": "Tôi muốn bàn thêm.",
+                "local_score": -7.635405446761101,
+                "context_score": 0.008667555637657642,
+                "score": -7.0806818859510114
+              }
+            ]
+          },
+          {
+            "id": "dev-bo-cattle",
+            "group": "bo",
+            "predicted": "Tôi mua bò.",
+            "target": "Tôi mua bò.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi mua bò.",
+                "local_score": -7.609370167005186,
+                "context_score": 0.054849911481142044,
+                "score": -4.098975832212095
+              },
+              {
+                "text": "Tôi mua bơ.",
+                "local_score": -8.842773572576437,
+                "context_score": 0.0,
+                "score": -8.842773572576437
+              }
+            ]
+          },
+          {
+            "id": "dev-bo-butter",
+            "group": "bo",
+            "predicted": "Tôi mua bò.",
+            "target": "Tôi mua bơ.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi mua bò.",
+                "local_score": -7.609370167005186,
+                "context_score": 0.025841660797595978,
+                "score": -5.955503875959043
+              },
+              {
+                "text": "Tôi mua bơ.",
+                "local_score": -8.842773572576437,
+                "context_score": 0.023384056985378265,
+                "score": -7.346193925512228
+              }
+            ]
+          },
+          {
+            "id": "dev-ca-shift",
+            "group": "ca",
+            "predicted": "Tôi chọn ca.",
+            "target": "Tôi chọn ca.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi chọn ca.",
+                "local_score": -7.209714238882454,
+                "context_score": 0.010366619564592838,
+                "score": -6.546250586748513
+              },
+              {
+                "text": "Tôi chọn cá.",
+                "local_score": -8.4681157779183,
+                "context_score": 0.0,
+                "score": -8.4681157779183
+              }
+            ]
+          },
+          {
+            "id": "dev-ca-fish",
+            "group": "ca",
+            "predicted": "Tôi chọn cá.",
+            "target": "Tôi chọn cá.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi chọn cá.",
+                "local_score": -8.4681157779183,
+                "context_score": 0.06751905381679535,
+                "score": -4.146896333643397
+              },
+              {
+                "text": "Tôi chọn ca.",
+                "local_score": -7.209714238882454,
+                "context_score": 0.0,
+                "score": -7.209714238882454
+              }
+            ]
+          },
+          {
+            "id": "dev-co-bird",
+            "group": "co",
+            "predicted": "Tôi thấy cỏ.",
+            "target": "Tôi thấy cò.",
+            "correct": false,
+            "ranked": [
+              {
+                "text": "Tôi thấy cỏ.",
+                "local_score": -7.255956428148402,
+                "context_score": 0.037033937871456146,
+                "score": -4.885784404375209
+              },
+              {
+                "text": "Tôi thấy cò.",
+                "local_score": -7.868625624156672,
+                "context_score": 0.0,
+                "score": -7.868625624156672
+              }
+            ]
+          },
+          {
+            "id": "dev-co-grass",
+            "group": "co",
+            "predicted": "Tôi thấy cỏ.",
+            "target": "Tôi thấy cỏ.",
+            "correct": true,
+            "ranked": [
+              {
+                "text": "Tôi thấy cỏ.",
+                "local_score": -7.255956428148402,
+                "context_score": 0.03541010618209839,
+                "score": -4.9897096324941055
+              },
+              {
+                "text": "Tôi thấy cò.",
+                "local_score": -7.868625624156672,
+                "context_score": 0.0,
+                "score": -7.868625624156672
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "note": "The synthetic context dev set selects only the ranking weight, not model weights."
+}

@@ -1,0 +1,14 @@
+{
+  "version": "experimental-phase2-v1",
+  "base_commit": "c5578073f23f1a7c722588f68a99f32e0f6197b9",
+  "model": "ml",
+  "corpus": "data/lm_corpus.txt",
+  "wordlist": "data/Viet74K.txt",
+  "index": {"max_features": 60000, "min_df": 2, "neighbors": 64, "minimum_similarity": 0.08},
+  "search": {"beam_width": 24, "max_candidates": 24, "max_phrase_syllables": 4, "max_variants_per_edge": 8, "channel_weight": 1.5, "phrase_weight": 0.25},
+  "realword_margin_grid": [0.0, 1.0, 2.0, 4.0, 8.0],
+  "context_weight_grid": [0.0, 4.0, 16.0, 64.0],
+  "context_promotion_margin": 0.01,
+  "selection": "Choose realword margin on original val by edit F0.5, then clean retention, then lower WER. Choose context weight on context_dev candidate-ranking accuracy, ties prefer smaller weight. Freeze before context_test and old test evaluation.",
+  "scope": "ML-only opt-in phase 2. Existing code, checkpoint, datasets and phase 1 outputs are immutable. Context is lexical retrieval evidence from train corpus only; not calibrated confidence."
+}

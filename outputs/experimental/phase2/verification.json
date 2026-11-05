@@ -1,0 +1,20 @@
+{
+  "python_tests": {
+    "passed": 54,
+    "skipped": 1,
+    "skip_reason": "Real Transformer inference remains opt-in."
+  },
+  "previous_files_checked": 186,
+  "previous_files_unchanged": true,
+  "frozen_source_hashes_match": true,
+  "legacy_metrics_match_phase1_baseline": true,
+  "context_fit_sources": [
+    "data/lm_corpus.txt"
+  ],
+  "context_labels_used_for_index": [],
+  "context_groups_and_documents_disjoint": true,
+  "cli_rejects_mismatched_checkpoint": true,
+  "phase1_cli_smoke": "OpenAI hoc. -> OpenAI học.",
+  "phase2_cli_smoke": "Toi muon ban them. with sales context -> Tôi muốn bán thêm.",
+  "context_cache_committed": false
+}

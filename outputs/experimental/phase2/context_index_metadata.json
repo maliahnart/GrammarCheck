@@ -1,0 +1,12 @@
+{
+  "corpus_path": "data/lm_corpus.txt",
+  "corpus_sha256": "4fb2ab87a15b97b7e92d9e505ba93af68147e4b840b325d4934255c2ff992c7b",
+  "fit_sources": [
+    "data/lm_corpus.txt"
+  ],
+  "label_files_used": [],
+  "n_sentences": 211396,
+  "n_features": 60000,
+  "build_seconds": 7.014239249998354,
+  "cache_sha256": "5f0a73016dbb61993e29a7e225979b9f45824b803eae482327308331d7c9d68b"
+}

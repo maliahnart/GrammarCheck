@@ -1,0 +1,36 @@
+{
+  "policy": {
+    "realword_margin": 0.0,
+    "context_weight": 64.0,
+    "promotion_margin": 0.01
+  },
+  "source_hashes": {
+    "configs/experimental_phase2.json": "4760d0f706311ac68820ee94de307fd1bb20c221c894b1bfc3428441f9933e9d",
+    "scripts/evaluate_phase2.py": "d7942462a9d90a5f96b6a61994c883c8f6b2de159f7677a41b21928fc0f95f7c",
+    "scripts/run_phase2.py": "5dad83f28ef9ce5e31751b62e33b37dfdc2a25623cc767eed2d07ef357fef1d8",
+    "src/experimental_core/__init__.py": "4103ea14b5bc555c1ec490d2c46b1ac80c47ec9a58356616e51f088243b91181",
+    "src/experimental_core/engine.py": "0608348e4cec0c900705045c32d371e0c736293422dff650aaf4a1a6f7268aca",
+    "src/experimental_core/lexicon.py": "cecb451cf92f7c6300bd722f0adafd640b469dee938ec5e7f2a209f73af0c2b1",
+    "src/experimental_phase2/__init__.py": "072cad94c05945fdc1d28f7ccd0e68991e7c7aef8592fce98f70eb1730111547",
+    "src/experimental_phase2/context.py": "0bd41adcdfa6de3181871226eece49d3307d94d0298e458df8a2a82b4ec283fc",
+    "src/experimental_phase2/engine.py": "1752b04a3c19aa1c4302426ca1c2cbfe63e658facd65ce0911d284c561e71c0a"
+  },
+  "checkpoint_sha256": "4aa4973767775ab6cbb440c32230f5cccc4b4153c9016ceca65a8fd30a7d28c9",
+  "wordlist_sha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90",
+  "corpus_sha256": "4fb2ab87a15b97b7e92d9e505ba93af68147e4b840b325d4934255c2ff992c7b",
+  "index_sha256": "5f0a73016dbb61993e29a7e225979b9f45824b803eae482327308331d7c9d68b",
+  "validation_sha256": "f76b9f3ca21a54acb43c504ce73c94f3ecfbba31dbf2f43fb161fa509de17092",
+  "dataset_plan": {
+    "fixture_sha256": {
+      "data/experimental/phase2/context_dev.jsonl": "3eac76d1128afe31e0ba95294243fccf9407494b7d72f6958f41dbc5c9a628bf",
+      "data/experimental/phase2/context_test.jsonl": "64b6bf863f0e0b3a0e89d58d51f711a36c67e58ec47d2fb01673593ef853c46e"
+    },
+    "dev_records": 8,
+    "test_records": 12,
+    "groups_disjoint": true,
+    "documents_disjoint": true,
+    "source": "Authored synthetic contrastive probes, not independently human-annotated real documents. No added supervised training records."
+  },
+  "selection_rule": "Choose realword margin on original val by edit F0.5, then clean retention, then lower WER. Choose context weight on context_dev candidate-ranking accuracy, ties prefer smaller weight. Freeze before context_test and old test evaluation.",
+  "frozen_at_utc": "2026-11-04T08:14:13.417144+00:00"
+}

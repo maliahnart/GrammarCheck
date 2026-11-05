@@ -1,0 +1,11 @@
+{
+  "fixture_sha256": {
+    "data/experimental/phase2/context_dev.jsonl": "3eac76d1128afe31e0ba95294243fccf9407494b7d72f6958f41dbc5c9a628bf",
+    "data/experimental/phase2/context_test.jsonl": "64b6bf863f0e0b3a0e89d58d51f711a36c67e58ec47d2fb01673593ef853c46e"
+  },
+  "dev_records": 8,
+  "test_records": 12,
+  "groups_disjoint": true,
+  "documents_disjoint": true,
+  "source": "Authored synthetic contrastive probes, not independently human-annotated real documents. No added supervised training records."
+}

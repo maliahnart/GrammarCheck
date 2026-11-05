@@ -1,0 +1,1680 @@
+{
+  "phase": 2,
+  "policy": {
+    "policy": {
+      "realword_margin": 0.0,
+      "context_weight": 64.0,
+      "promotion_margin": 0.01
+    },
+    "source_hashes": {
+      "configs/experimental_phase2.json": "4760d0f706311ac68820ee94de307fd1bb20c221c894b1bfc3428441f9933e9d",
+      "scripts/evaluate_phase2.py": "d7942462a9d90a5f96b6a61994c883c8f6b2de159f7677a41b21928fc0f95f7c",
+      "scripts/run_phase2.py": "5dad83f28ef9ce5e31751b62e33b37dfdc2a25623cc767eed2d07ef357fef1d8",
+      "src/experimental_core/__init__.py": "4103ea14b5bc555c1ec490d2c46b1ac80c47ec9a58356616e51f088243b91181",
+      "src/experimental_core/engine.py": "0608348e4cec0c900705045c32d371e0c736293422dff650aaf4a1a6f7268aca",
+      "src/experimental_core/lexicon.py": "cecb451cf92f7c6300bd722f0adafd640b469dee938ec5e7f2a209f73af0c2b1",
+      "src/experimental_phase2/__init__.py": "072cad94c05945fdc1d28f7ccd0e68991e7c7aef8592fce98f70eb1730111547",
+      "src/experimental_phase2/context.py": "0bd41adcdfa6de3181871226eece49d3307d94d0298e458df8a2a82b4ec283fc",
+      "src/experimental_phase2/engine.py": "1752b04a3c19aa1c4302426ca1c2cbfe63e658facd65ce0911d284c561e71c0a"
+    },
+    "checkpoint_sha256": "4aa4973767775ab6cbb440c32230f5cccc4b4153c9016ceca65a8fd30a7d28c9",
+    "wordlist_sha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90",
+    "corpus_sha256": "4fb2ab87a15b97b7e92d9e505ba93af68147e4b840b325d4934255c2ff992c7b",
+    "index_sha256": "5f0a73016dbb61993e29a7e225979b9f45824b803eae482327308331d7c9d68b",
+    "validation_sha256": "f76b9f3ca21a54acb43c504ce73c94f3ecfbba31dbf2f43fb161fa509de17092",
+    "dataset_plan": {
+      "fixture_sha256": {
+        "data/experimental/phase2/context_dev.jsonl": "3eac76d1128afe31e0ba95294243fccf9407494b7d72f6958f41dbc5c9a628bf",
+        "data/experimental/phase2/context_test.jsonl": "64b6bf863f0e0b3a0e89d58d51f711a36c67e58ec47d2fb01673593ef853c46e"
+      },
+      "dev_records": 8,
+      "test_records": 12,
+      "groups_disjoint": true,
+      "documents_disjoint": true,
+      "source": "Authored synthetic contrastive probes, not independently human-annotated real documents. No added supervised training records."
+    },
+    "selection_rule": "Choose realword margin on original val by edit F0.5, then clean retention, then lower WER. Choose context weight on context_dev candidate-ranking accuracy, ties prefer smaller weight. Freeze before context_test and old test evaluation.",
+    "frozen_at_utc": "2026-11-04T08:14:13.417144+00:00"
+  },
+  "original_files": {
+    "parent_commit": "c5578073f23f1a7c722588f68a99f32e0f6197b9",
+    "files_checked": 186,
+    "all_unchanged": true
+  },
+  "supervised_training_records_added": 0,
+  "baseline_checkpoint_retrained": false,
+  "context_index": {
+    "corpus_path": "data/lm_corpus.txt",
+    "corpus_sha256": "4fb2ab87a15b97b7e92d9e505ba93af68147e4b840b325d4934255c2ff992c7b",
+    "fit_sources": [
+      "data/lm_corpus.txt"
+    ],
+    "label_files_used": [],
+    "n_sentences": 211396,
+    "n_features": 60000,
+    "build_seconds": 7.014239249998354,
+    "cache_sha256": "5f0a73016dbb61993e29a7e225979b9f45824b803eae482327308331d7c9d68b"
+  },
+  "runtime": {
+    "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-14.6.1-arm64-arm-64bit"
+  },
+  "sets": {
+    "test": {
+      "n": 1653,
+      "input_sha256": "48f47ab39b4460a9d8b836456eab180056ec3d5a28fe1ed81d3c742e89414b6c",
+      "legacy": {
+        "n": 1653,
+        "sent_precision": 0.9552992069214131,
+        "sent_recall": 0.9714076246334311,
+        "sent_f1": 0.9632860777898946,
+        "tok_precision": 0.9250656433043829,
+        "tok_recall": 0.9080095162569389,
+        "tok_f1": 0.9164582291145572,
+        "edit_precision": 0.7065735154017149,
+        "edit_recall": 0.7285527177472167,
+        "edit_f05": 0.7108626198083068,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.014443596483789818,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.040103721601791556,
+        "exact_match": 0.514216575922565,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.7854671280276817,
+        "overcorrected_clean": 62,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.6428571428571429,
+          "mixed": 0.410958904109589,
+          "none": 0.7854671280276817,
+          "spelling": 0.48825065274151436
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5188470066518847,
+          "informal": 0.49333333333333335
+        },
+        "raw_exact_match": 0.5136116152450091
+      },
+      "phase1": {
+        "n": 1653,
+        "sent_precision": 0.9711111111111111,
+        "sent_recall": 0.9611436950146628,
+        "sent_f1": 0.9661016949152542,
+        "tok_precision": 0.9385983047343395,
+        "tok_recall": 0.9000793021411578,
+        "tok_f1": 0.9189353304321425,
+        "edit_precision": 0.7035725780495655,
+        "edit_recall": 0.7157825802226588,
+        "edit_f05": 0.705981139387676,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.014514259871675287,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.03957332704717565,
+        "exact_match": 0.5378100423472474,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.8650519031141869,
+        "overcorrected_clean": 39,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "mixed": 0.4126712328767123,
+          "none": 0.8650519031141869,
+          "spelling": 0.5013054830287206
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5099778270509978,
+          "informal": 0.6633333333333333
+        },
+        "raw_exact_match": 0.5372050816696915
+      },
+      "phase2": {
+        "n": 1653,
+        "sent_precision": 0.9656432748538012,
+        "sent_recall": 0.968475073313783,
+        "sent_f1": 0.9670571010248902,
+        "tok_precision": 0.9401459854014599,
+        "tok_recall": 0.893735130848533,
+        "tok_f1": 0.9163532879357658,
+        "edit_precision": 0.7030848329048843,
+        "edit_recall": 0.7164374590700721,
+        "edit_f05": 0.7057153915623791,
+        "cer_before": 0.04771191950026852,
+        "cer_after": 0.01433053506317307,
+        "wer_before": 0.1551404072251525,
+        "wer_after": 0.03957332704717565,
+        "exact_match": 0.5372050816696915,
+        "exact_match_input": 0.17483363581367212,
+        "clean_sentences": 289,
+        "clean_kept_rate": 0.8373702422145328,
+        "overcorrected_clean": 47,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "mixed": 0.4178082191780822,
+          "none": 0.8373702422145328,
+          "spelling": 0.5065274151436031
+        },
+        "count_by_error_type": {
+          "abbreviation": 14,
+          "mixed": 584,
+          "none": 289,
+          "spelling": 766
+        },
+        "exact_by_style": {
+          "formal": 0.5092387287509239,
+          "informal": 0.6633333333333333
+        },
+        "raw_exact_match": 0.5366001209921355
+      },
+      "protected_span_violations": 0,
+      "latency_ms": {
+        "p50_analysis": 20.72458399925381,
+        "p95_analysis": 49.135374996694736
+      }
+    },
+    "test_real": {
+      "n": 95,
+      "input_sha256": "87a3fa51155ccc4069fe83931a1ae58cb9bd610c078e9eedebaab0c36a07a92f",
+      "legacy": {
+        "n": 95,
+        "sent_precision": 0.847457627118644,
+        "sent_recall": 0.9090909090909091,
+        "sent_f1": 0.8771929824561402,
+        "tok_precision": 0.8461538461538461,
+        "tok_recall": 0.8888888888888888,
+        "tok_f1": 0.8669950738916256,
+        "edit_precision": 0.7752808988764045,
+        "edit_recall": 0.8414634146341463,
+        "edit_f05": 0.7876712328767123,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.007669365146996165,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.024701873935264053,
+        "exact_match": 0.7263157894736842,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.775,
+        "overcorrected_clean": 9,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.5882352941176471,
+          "casing_punct": 0.8333333333333334,
+          "context": 0.5,
+          "grammar": 0.875,
+          "mixed": 0.6,
+          "none": 0.775,
+          "spelling": 0.7692307692307693
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.8367346938775511,
+          "informal": 0.6086956521739131
+        },
+        "raw_exact_match": 0.7263157894736842
+      },
+      "phase1": {
+        "n": 95,
+        "sent_precision": 0.8333333333333334,
+        "sent_recall": 0.8181818181818182,
+        "sent_f1": 0.8256880733944955,
+        "tok_precision": 0.7904761904761904,
+        "tok_recall": 0.8383838383838383,
+        "tok_f1": 0.8137254901960784,
+        "edit_precision": 0.7209302325581395,
+        "edit_recall": 0.7560975609756098,
+        "edit_f05": 0.7276995305164319,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.011717085641244141,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.03492333901192504,
+        "exact_match": 0.631578947368421,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.775,
+        "overcorrected_clean": 9,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.4117647058823529,
+          "casing_punct": 0.5,
+          "context": 0.5,
+          "grammar": 0.5,
+          "mixed": 0.6,
+          "none": 0.775,
+          "spelling": 0.6923076923076923
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.7755102040816326,
+          "informal": 0.4782608695652174
+        },
+        "raw_exact_match": 0.631578947368421
+      },
+      "phase2": {
+        "n": 95,
+        "sent_precision": 0.847457627118644,
+        "sent_recall": 0.9090909090909091,
+        "sent_f1": 0.8771929824561402,
+        "tok_precision": 0.8461538461538461,
+        "tok_recall": 0.8888888888888888,
+        "tok_f1": 0.8669950738916256,
+        "edit_precision": 0.7752808988764045,
+        "edit_recall": 0.8414634146341463,
+        "edit_f05": 0.7876712328767123,
+        "cer_before": 0.047933532168726034,
+        "cer_after": 0.007669365146996165,
+        "wer_before": 0.09114139693356048,
+        "wer_after": 0.024701873935264053,
+        "exact_match": 0.7263157894736842,
+        "exact_match_input": 0.42105263157894735,
+        "clean_sentences": 40,
+        "clean_kept_rate": 0.775,
+        "overcorrected_clean": 9,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 0.5882352941176471,
+          "casing_punct": 0.8333333333333334,
+          "context": 0.5,
+          "grammar": 0.875,
+          "mixed": 0.6,
+          "none": 0.775,
+          "spelling": 0.7692307692307693
+        },
+        "count_by_error_type": {
+          "abbreviation": 17,
+          "casing_punct": 6,
+          "context": 6,
+          "grammar": 8,
+          "mixed": 5,
+          "none": 40,
+          "spelling": 13
+        },
+        "exact_by_style": {
+          "formal": 0.8367346938775511,
+          "informal": 0.6086956521739131
+        },
+        "raw_exact_match": 0.7263157894736842
+      },
+      "protected_span_violations": 0,
+      "latency_ms": {
+        "p50_analysis": 10.958625003695488,
+        "p95_analysis": 18.90149999235291
+      }
+    },
+    "test_vsec": {
+      "n": 1000,
+      "input_sha256": "eaa1e20e292f3ab6dff67642808d5bdd04dd46f8be737649fd04501271541d08",
+      "legacy": {
+        "n": 1000,
+        "sent_precision": 0.9432835820895522,
+        "sent_recall": 0.79,
+        "sent_f1": 0.8598639455782312,
+        "tok_precision": 0.7304250559284117,
+        "tok_recall": 0.6595959595959596,
+        "tok_f1": 0.6932059447983016,
+        "edit_precision": 0.620137299771167,
+        "edit_recall": 0.5778251599147122,
+        "edit_f05": 0.6111862877762743,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.007574723134526795,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.02053227360308285,
+        "exact_match": 0.538,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.81,
+        "overcorrected_clean": 38,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.81,
+          "spelling": 0.47
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.538
+        },
+        "raw_exact_match": 0.538
+      },
+      "phase1": {
+        "n": 1000,
+        "sent_precision": 0.9542586750788643,
+        "sent_recall": 0.75625,
+        "sent_f1": 0.8437935843793585,
+        "tok_precision": 0.7281993204983013,
+        "tok_recall": 0.6494949494949495,
+        "tok_f1": 0.6865990389749065,
+        "edit_precision": 0.6247086247086248,
+        "edit_recall": 0.5714285714285714,
+        "edit_f05": 0.6132723112128147,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.0075675364901866375,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.020712909441233142,
+        "exact_match": 0.534,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.855,
+        "overcorrected_clean": 29,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.855,
+          "spelling": 0.45375
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.534
+        },
+        "raw_exact_match": 0.534
+      },
+      "phase2": {
+        "n": 1000,
+        "sent_precision": 0.9432835820895522,
+        "sent_recall": 0.79,
+        "sent_f1": 0.8598639455782312,
+        "tok_precision": 0.7312430011198209,
+        "tok_recall": 0.6595959595959596,
+        "tok_f1": 0.6935740839086564,
+        "edit_precision": 0.6208476517754868,
+        "edit_recall": 0.5778251599147122,
+        "edit_f05": 0.6117381489841986,
+        "cer_before": 0.00911266502332066,
+        "cer_after": 0.0075675364901866375,
+        "wer_before": 0.03040703275529865,
+        "wer_after": 0.020502167630057803,
+        "exact_match": 0.538,
+        "exact_match_input": 0.2,
+        "clean_sentences": 200,
+        "clean_kept_rate": 0.81,
+        "overcorrected_clean": 38,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "none": 0.81,
+          "spelling": 0.47
+        },
+        "count_by_error_type": {
+          "none": 200,
+          "spelling": 800
+        },
+        "exact_by_style": {
+          "formal": 0.538
+        },
+        "raw_exact_match": 0.538
+      },
+      "protected_span_violations": 0,
+      "latency_ms": {
+        "p50_analysis": 25.593624995963182,
+        "p95_analysis": 57.80850000155624
+      }
+    },
+    "diagnostic": {
+      "n": 24,
+      "input_sha256": "baf7bbecf9fc322c97aa00f07ecd4d326bfaf989e221a2f2f2cc778cdd10277f",
+      "legacy": {
+        "n": 24,
+        "sent_precision": 0.5384615384615384,
+        "sent_recall": 1.0,
+        "sent_f1": 0.7000000000000001,
+        "tok_precision": 0.5333333333333333,
+        "tok_recall": 1.0,
+        "tok_f1": 0.6956521739130436,
+        "edit_precision": 0.5333333333333333,
+        "edit_recall": 1.0,
+        "edit_f05": 0.5882352941176471,
+        "cer_before": 0.028315946348733235,
+        "cer_after": 0.014903129657228018,
+        "wer_before": 0.04371584699453552,
+        "wer_after": 0.03825136612021858,
+        "exact_match": 0.75,
+        "exact_match_input": 0.7083333333333334,
+        "clean_sentences": 17,
+        "clean_kept_rate": 0.6470588235294118,
+        "overcorrected_clean": 6,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "abbreviation_disabled": 1.0,
+          "correct_ambiguity": 0.5,
+          "correct_low_accent": 0.5,
+          "correct_realword": 0.5,
+          "correct_reduplication": 1.0,
+          "expressive": 0.5,
+          "grammar": 1.0,
+          "layout": 1.0,
+          "protected_structure": 0.5,
+          "protected_terms": 1.0,
+          "spelling": 1.0
+        },
+        "count_by_error_type": {
+          "abbreviation": 1,
+          "abbreviation_disabled": 1,
+          "correct_ambiguity": 2,
+          "correct_low_accent": 2,
+          "correct_realword": 2,
+          "correct_reduplication": 1,
+          "expressive": 4,
+          "grammar": 3,
+          "layout": 1,
+          "protected_structure": 2,
+          "protected_terms": 3,
+          "spelling": 2
+        },
+        "exact_by_style": {
+          "formal": 0.9,
+          "informal": 0.6428571428571429
+        },
+        "raw_exact_match": 0.7083333333333334
+      },
+      "phase1": {
+        "n": 24,
+        "sent_precision": 0.5833333333333334,
+        "sent_recall": 1.0,
+        "sent_f1": 0.7368421052631579,
+        "tok_precision": 0.5714285714285714,
+        "tok_recall": 1.0,
+        "tok_f1": 0.7272727272727273,
+        "edit_precision": 0.6153846153846154,
+        "edit_recall": 1.0,
+        "edit_f05": 0.6666666666666667,
+        "cer_before": 0.028315946348733235,
+        "cer_after": 0.014903129657228018,
+        "wer_before": 0.04371584699453552,
+        "wer_after": 0.03278688524590164,
+        "exact_match": 0.7916666666666666,
+        "exact_match_input": 0.7083333333333334,
+        "clean_sentences": 17,
+        "clean_kept_rate": 0.7058823529411765,
+        "overcorrected_clean": 5,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "abbreviation_disabled": 1.0,
+          "correct_ambiguity": 0.5,
+          "correct_low_accent": 0.5,
+          "correct_realword": 0.5,
+          "correct_reduplication": 1.0,
+          "expressive": 0.5,
+          "grammar": 1.0,
+          "layout": 1.0,
+          "protected_structure": 1.0,
+          "protected_terms": 1.0,
+          "spelling": 1.0
+        },
+        "count_by_error_type": {
+          "abbreviation": 1,
+          "abbreviation_disabled": 1,
+          "correct_ambiguity": 2,
+          "correct_low_accent": 2,
+          "correct_realword": 2,
+          "correct_reduplication": 1,
+          "expressive": 4,
+          "grammar": 3,
+          "layout": 1,
+          "protected_structure": 2,
+          "protected_terms": 3,
+          "spelling": 2
+        },
+        "exact_by_style": {
+          "formal": 1.0,
+          "informal": 0.6428571428571429
+        },
+        "raw_exact_match": 0.7916666666666666
+      },
+      "phase2": {
+        "n": 24,
+        "sent_precision": 0.5833333333333334,
+        "sent_recall": 1.0,
+        "sent_f1": 0.7368421052631579,
+        "tok_precision": 0.6153846153846154,
+        "tok_recall": 1.0,
+        "tok_f1": 0.761904761904762,
+        "edit_precision": 0.6153846153846154,
+        "edit_recall": 1.0,
+        "edit_f05": 0.6666666666666667,
+        "cer_before": 0.028315946348733235,
+        "cer_after": 0.011922503725782414,
+        "wer_before": 0.04371584699453552,
+        "wer_after": 0.0273224043715847,
+        "exact_match": 0.7916666666666666,
+        "exact_match_input": 0.7083333333333334,
+        "clean_sentences": 17,
+        "clean_kept_rate": 0.7058823529411765,
+        "overcorrected_clean": 5,
+        "expressive_tokens_lost": 0,
+        "exact_by_error_type": {
+          "abbreviation": 1.0,
+          "abbreviation_disabled": 1.0,
+          "correct_ambiguity": 0.5,
+          "correct_low_accent": 0.5,
+          "correct_realword": 0.5,
+          "correct_reduplication": 1.0,
+          "expressive": 0.5,
+          "grammar": 1.0,
+          "layout": 1.0,
+          "protected_structure": 1.0,
+          "protected_terms": 1.0,
+          "spelling": 1.0
+        },
+        "count_by_error_type": {
+          "abbreviation": 1,
+          "abbreviation_disabled": 1,
+          "correct_ambiguity": 2,
+          "correct_low_accent": 2,
+          "correct_realword": 2,
+          "correct_reduplication": 1,
+          "expressive": 4,
+          "grammar": 3,
+          "layout": 1,
+          "protected_structure": 2,
+          "protected_terms": 3,
+          "spelling": 2
+        },
+        "exact_by_style": {
+          "formal": 1.0,
+          "informal": 0.6428571428571429
+        },
+        "raw_exact_match": 0.7916666666666666
+      },
+      "protected_span_violations": 0,
+      "latency_ms": {
+        "p50_analysis": 6.118063000030816,
+        "p95_analysis": 9.7703339997679
+      }
+    }
+  },
+  "limitations": [
+    "Existing test sets were inspected during phase 1; this is exploratory regression analysis.",
+    "Context probes are synthetic, authored by the implementer, small, and not independent human evaluation.",
+    "Candidate-supplied probes isolate ranking; they do not measure end-to-end correction.",
+    "TF-IDF context support is lexical association, not calibrated semantic understanding.",
+    "No new learning curve or proof of absence of memorization."
+  ],
+  "context_test": {
+    "ranking_with_context": {
+      "n": 12,
+      "accuracy": 0.5833333333333334,
+      "contrast_pairs_both_correct": 1,
+      "n_contrast_pairs": 6,
+      "predictions": [
+        {
+          "id": "test-thu-letter",
+          "group": "thu",
+          "predicted": "Tôi xem thư.",
+          "target": "Tôi xem thư.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi xem thư.",
+              "local_score": -7.409674792433274,
+              "context_score": 0.04774292930960655,
+              "score": -4.354127316618455
+            },
+            {
+              "text": "Tôi xem thú.",
+              "local_score": -7.666202970514377,
+              "context_score": 0.0,
+              "score": -7.666202970514377
+            }
+          ]
+        },
+        {
+          "id": "test-thu-animal",
+          "group": "thu",
+          "predicted": "Tôi xem thư.",
+          "target": "Tôi xem thú.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi xem thư.",
+              "local_score": -7.409674792433274,
+              "context_score": 0.0,
+              "score": -7.409674792433274
+            },
+            {
+              "text": "Tôi xem thú.",
+              "local_score": -7.666202970514377,
+              "context_score": 0.0,
+              "score": -7.666202970514377
+            }
+          ]
+        },
+        {
+          "id": "test-can-scale",
+          "group": "can",
+          "predicted": "Tôi mua cân.",
+          "target": "Tôi mua cân.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi mua cân.",
+              "local_score": -7.556204928635963,
+              "context_score": 0.013425351120531559,
+              "score": -6.696982456921943
+            },
+            {
+              "text": "Tôi mua can.",
+              "local_score": -7.448050777433216,
+              "context_score": 0.0,
+              "score": -7.448050777433216
+            }
+          ]
+        },
+        {
+          "id": "test-can-container",
+          "group": "can",
+          "predicted": "Tôi mua can.",
+          "target": "Tôi mua can.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi mua can.",
+              "local_score": -7.448050777433216,
+              "context_score": 0.0,
+              "score": -7.448050777433216
+            },
+            {
+              "text": "Tôi mua cân.",
+              "local_score": -7.556204928635963,
+              "context_score": 0.0,
+              "score": -7.556204928635963
+            }
+          ]
+        },
+        {
+          "id": "test-dau-oil",
+          "group": "dau",
+          "predicted": "Tôi cần dầu.",
+          "target": "Tôi cần dầu.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi cần dầu.",
+              "local_score": -7.619109175348448,
+              "context_score": 0.07466909289360046,
+              "score": -2.840287230158018
+            },
+            {
+              "text": "Tôi cần dâu.",
+              "local_score": -7.963007396161586,
+              "context_score": 0.0,
+              "score": -7.963007396161586
+            }
+          ]
+        },
+        {
+          "id": "test-dau-berry",
+          "group": "dau",
+          "predicted": "Tôi cần dầu.",
+          "target": "Tôi cần dâu.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi cần dầu.",
+              "local_score": -7.619109175348448,
+              "context_score": 0.03053111955523491,
+              "score": -5.6651175238134135
+            },
+            {
+              "text": "Tôi cần dâu.",
+              "local_score": -7.963007396161586,
+              "context_score": 0.009134206920862198,
+              "score": -7.378418153226406
+            }
+          ]
+        },
+        {
+          "id": "test-da-stone",
+          "group": "da",
+          "predicted": "Đây là đá.",
+          "target": "Đây là đá.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Đây là đá.",
+              "local_score": -4.684596960514392,
+              "context_score": 0.039917200803756714,
+              "score": -2.129896109073962
+            },
+            {
+              "text": "Đây là da.",
+              "local_score": -5.0557260890855,
+              "context_score": 0.01976274698972702,
+              "score": -3.7909102817429705
+            }
+          ]
+        },
+        {
+          "id": "test-da-leather",
+          "group": "da",
+          "predicted": "Đây là đá.",
+          "target": "Đây là da.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Đây là đá.",
+              "local_score": -4.684596960514392,
+              "context_score": 0.03030763939023018,
+              "score": -2.74490803953966
+            },
+            {
+              "text": "Đây là da.",
+              "local_score": -5.0557260890855,
+              "context_score": 0.009875515475869179,
+              "score": -4.423693098629872
+            }
+          ]
+        },
+        {
+          "id": "test-ma-code",
+          "group": "ma",
+          "predicted": "Tôi xem mã.",
+          "target": "Tôi xem mã.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi xem mã.",
+              "local_score": -7.322274710961519,
+              "context_score": 0.046465784311294556,
+              "score": -4.348464515038668
+            },
+            {
+              "text": "Tôi xem mạ.",
+              "local_score": -8.079885219895184,
+              "context_score": 0.0,
+              "score": -8.079885219895184
+            }
+          ]
+        },
+        {
+          "id": "test-ma-seedling",
+          "group": "ma",
+          "predicted": "Tôi xem mã.",
+          "target": "Tôi xem mạ.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi xem mã.",
+              "local_score": -7.322274710961519,
+              "context_score": 0.0,
+              "score": -7.322274710961519
+            },
+            {
+              "text": "Tôi xem mạ.",
+              "local_score": -8.079885219895184,
+              "context_score": 0.0,
+              "score": -8.079885219895184
+            }
+          ]
+        },
+        {
+          "id": "test-vai-role",
+          "group": "vai",
+          "predicted": "Tôi chọn vai.",
+          "target": "Tôi chọn vai.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi chọn vai.",
+              "local_score": -8.581309698241423,
+              "context_score": 0.004445357713848352,
+              "score": -8.296806804555128
+            },
+            {
+              "text": "Tôi chọn vải.",
+              "local_score": -8.852912554206423,
+              "context_score": 0.0,
+              "score": -8.852912554206423
+            }
+          ]
+        },
+        {
+          "id": "test-vai-fabric",
+          "group": "vai",
+          "predicted": "Tôi chọn vai.",
+          "target": "Tôi chọn vải.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi chọn vai.",
+              "local_score": -8.581309698241423,
+              "context_score": 0.0,
+              "score": -8.581309698241423
+            },
+            {
+              "text": "Tôi chọn vải.",
+              "local_score": -8.852912554206423,
+              "context_score": 0.0,
+              "score": -8.852912554206423
+            }
+          ]
+        }
+      ]
+    },
+    "ranking_without_context": {
+      "n": 12,
+      "accuracy": 0.5,
+      "contrast_pairs_both_correct": 0,
+      "n_contrast_pairs": 6,
+      "predictions": [
+        {
+          "id": "test-thu-letter",
+          "group": "thu",
+          "predicted": "Tôi xem thư.",
+          "target": "Tôi xem thư.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi xem thư.",
+              "local_score": -7.409674792433274,
+              "context_score": 0.04774292930960655,
+              "score": -7.409674792433274
+            },
+            {
+              "text": "Tôi xem thú.",
+              "local_score": -7.666202970514377,
+              "context_score": 0.0,
+              "score": -7.666202970514377
+            }
+          ]
+        },
+        {
+          "id": "test-thu-animal",
+          "group": "thu",
+          "predicted": "Tôi xem thư.",
+          "target": "Tôi xem thú.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi xem thư.",
+              "local_score": -7.409674792433274,
+              "context_score": 0.0,
+              "score": -7.409674792433274
+            },
+            {
+              "text": "Tôi xem thú.",
+              "local_score": -7.666202970514377,
+              "context_score": 0.0,
+              "score": -7.666202970514377
+            }
+          ]
+        },
+        {
+          "id": "test-can-scale",
+          "group": "can",
+          "predicted": "Tôi mua can.",
+          "target": "Tôi mua cân.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi mua can.",
+              "local_score": -7.448050777433216,
+              "context_score": 0.0,
+              "score": -7.448050777433216
+            },
+            {
+              "text": "Tôi mua cân.",
+              "local_score": -7.556204928635963,
+              "context_score": 0.013425351120531559,
+              "score": -7.556204928635963
+            }
+          ]
+        },
+        {
+          "id": "test-can-container",
+          "group": "can",
+          "predicted": "Tôi mua can.",
+          "target": "Tôi mua can.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi mua can.",
+              "local_score": -7.448050777433216,
+              "context_score": 0.0,
+              "score": -7.448050777433216
+            },
+            {
+              "text": "Tôi mua cân.",
+              "local_score": -7.556204928635963,
+              "context_score": 0.0,
+              "score": -7.556204928635963
+            }
+          ]
+        },
+        {
+          "id": "test-dau-oil",
+          "group": "dau",
+          "predicted": "Tôi cần dầu.",
+          "target": "Tôi cần dầu.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi cần dầu.",
+              "local_score": -7.619109175348448,
+              "context_score": 0.07466909289360046,
+              "score": -7.619109175348448
+            },
+            {
+              "text": "Tôi cần dâu.",
+              "local_score": -7.963007396161586,
+              "context_score": 0.0,
+              "score": -7.963007396161586
+            }
+          ]
+        },
+        {
+          "id": "test-dau-berry",
+          "group": "dau",
+          "predicted": "Tôi cần dầu.",
+          "target": "Tôi cần dâu.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi cần dầu.",
+              "local_score": -7.619109175348448,
+              "context_score": 0.03053111955523491,
+              "score": -7.619109175348448
+            },
+            {
+              "text": "Tôi cần dâu.",
+              "local_score": -7.963007396161586,
+              "context_score": 0.009134206920862198,
+              "score": -7.963007396161586
+            }
+          ]
+        },
+        {
+          "id": "test-da-stone",
+          "group": "da",
+          "predicted": "Đây là đá.",
+          "target": "Đây là đá.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Đây là đá.",
+              "local_score": -4.684596960514392,
+              "context_score": 0.039917200803756714,
+              "score": -4.684596960514392
+            },
+            {
+              "text": "Đây là da.",
+              "local_score": -5.0557260890855,
+              "context_score": 0.01976274698972702,
+              "score": -5.0557260890855
+            }
+          ]
+        },
+        {
+          "id": "test-da-leather",
+          "group": "da",
+          "predicted": "Đây là đá.",
+          "target": "Đây là da.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Đây là đá.",
+              "local_score": -4.684596960514392,
+              "context_score": 0.03030763939023018,
+              "score": -4.684596960514392
+            },
+            {
+              "text": "Đây là da.",
+              "local_score": -5.0557260890855,
+              "context_score": 0.009875515475869179,
+              "score": -5.0557260890855
+            }
+          ]
+        },
+        {
+          "id": "test-ma-code",
+          "group": "ma",
+          "predicted": "Tôi xem mã.",
+          "target": "Tôi xem mã.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi xem mã.",
+              "local_score": -7.322274710961519,
+              "context_score": 0.046465784311294556,
+              "score": -7.322274710961519
+            },
+            {
+              "text": "Tôi xem mạ.",
+              "local_score": -8.079885219895184,
+              "context_score": 0.0,
+              "score": -8.079885219895184
+            }
+          ]
+        },
+        {
+          "id": "test-ma-seedling",
+          "group": "ma",
+          "predicted": "Tôi xem mã.",
+          "target": "Tôi xem mạ.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi xem mã.",
+              "local_score": -7.322274710961519,
+              "context_score": 0.0,
+              "score": -7.322274710961519
+            },
+            {
+              "text": "Tôi xem mạ.",
+              "local_score": -8.079885219895184,
+              "context_score": 0.0,
+              "score": -8.079885219895184
+            }
+          ]
+        },
+        {
+          "id": "test-vai-role",
+          "group": "vai",
+          "predicted": "Tôi chọn vai.",
+          "target": "Tôi chọn vai.",
+          "correct": true,
+          "ranked": [
+            {
+              "text": "Tôi chọn vai.",
+              "local_score": -8.581309698241423,
+              "context_score": 0.004445357713848352,
+              "score": -8.581309698241423
+            },
+            {
+              "text": "Tôi chọn vải.",
+              "local_score": -8.852912554206423,
+              "context_score": 0.0,
+              "score": -8.852912554206423
+            }
+          ]
+        },
+        {
+          "id": "test-vai-fabric",
+          "group": "vai",
+          "predicted": "Tôi chọn vai.",
+          "target": "Tôi chọn vải.",
+          "correct": false,
+          "ranked": [
+            {
+              "text": "Tôi chọn vai.",
+              "local_score": -8.581309698241423,
+              "context_score": 0.0,
+              "score": -8.581309698241423
+            },
+            {
+              "text": "Tôi chọn vải.",
+              "local_score": -8.852912554206423,
+              "context_score": 0.0,
+              "score": -8.852912554206423
+            }
+          ]
+        }
+      ]
+    },
+    "end_to_end": [
+      {
+        "id": "test-thu-letter",
+        "document_id": "test-doc-thu-letter",
+        "target": "Tôi xem thư.",
+        "output": "Tôi xem thư.",
+        "no_context_output": "Tôi xem thử.",
+        "correct": true,
+        "no_context_correct": false,
+        "context_promoted": true,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 63866,
+              "similarity": 0.2947724759578705
+            },
+            {
+              "corpus_row": 196243,
+              "similarity": 0.28881216049194336
+            },
+            {
+              "corpus_row": 62930,
+              "similarity": 0.23420070111751556
+            },
+            {
+              "corpus_row": 176754,
+              "similarity": 0.23275364935398102
+            },
+            {
+              "corpus_row": 69980,
+              "similarity": 0.23015998303890228
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tôi xem thư.",
+          "Tới xem thư.",
+          "Tới xem thử."
+        ]
+      },
+      {
+        "id": "test-thu-animal",
+        "document_id": "test-doc-thu-animal",
+        "target": "Tôi xem thú.",
+        "output": "Tôi xem thử.",
+        "no_context_output": "Tôi xem thử.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": false,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 9257,
+              "similarity": 0.42644453048706055
+            },
+            {
+              "corpus_row": 56324,
+              "similarity": 0.3707328140735626
+            },
+            {
+              "corpus_row": 170225,
+              "similarity": 0.346325159072876
+            },
+            {
+              "corpus_row": 126586,
+              "similarity": 0.3433370292186737
+            },
+            {
+              "corpus_row": 180796,
+              "similarity": 0.3387790024280548
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tôi xem thử.",
+          "Tôi xem thủ.",
+          "Tôi xem thu."
+        ]
+      },
+      {
+        "id": "test-can-scale",
+        "document_id": "test-doc-can-scale",
+        "target": "Tôi mua cân.",
+        "output": "Tôi mua căn.",
+        "no_context_output": "Tôi mua căn.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": false,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 12920,
+              "similarity": 0.3069573938846588
+            },
+            {
+              "corpus_row": 99998,
+              "similarity": 0.26749175786972046
+            },
+            {
+              "corpus_row": 197207,
+              "similarity": 0.2519146203994751
+            },
+            {
+              "corpus_row": 50380,
+              "similarity": 0.2444428950548172
+            },
+            {
+              "corpus_row": 56601,
+              "similarity": 0.23776231706142426
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tội mua căn.",
+          "Tôi mua căn.",
+          "Tôi mua cân."
+        ]
+      },
+      {
+        "id": "test-can-container",
+        "document_id": "test-doc-can-container",
+        "target": "Tôi mua can.",
+        "output": "Tôi mua căn.",
+        "no_context_output": "Tôi mua căn.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": false,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 8782,
+              "similarity": 0.4273803234100342
+            },
+            {
+              "corpus_row": 64458,
+              "similarity": 0.32672443985939026
+            },
+            {
+              "corpus_row": 63176,
+              "similarity": 0.26186469197273254
+            },
+            {
+              "corpus_row": 120311,
+              "similarity": 0.25751185417175293
+            },
+            {
+              "corpus_row": 133441,
+              "similarity": 0.24702534079551697
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tội mua căn.",
+          "Tôi mua căn.",
+          "Tôi mua cận."
+        ]
+      },
+      {
+        "id": "test-dau-oil",
+        "document_id": "test-doc-dau-oil",
+        "target": "Tôi cần dầu.",
+        "output": "Tới cần dầu.",
+        "no_context_output": "Tôi cần đầu.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": true,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 55541,
+              "similarity": 0.4257183074951172
+            },
+            {
+              "corpus_row": 60762,
+              "similarity": 0.29746970534324646
+            },
+            {
+              "corpus_row": 100595,
+              "similarity": 0.2886936366558075
+            },
+            {
+              "corpus_row": 57742,
+              "similarity": 0.2800866365432739
+            },
+            {
+              "corpus_row": 166300,
+              "similarity": 0.27647414803504944
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tới cần dầu.",
+          "Tôi cần dầu.",
+          "Tới cần đầu."
+        ]
+      },
+      {
+        "id": "test-dau-berry",
+        "document_id": "test-doc-dau-berry",
+        "target": "Tôi cần dâu.",
+        "output": "Tới cần dầu.",
+        "no_context_output": "Tôi cần đầu.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": true,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 11805,
+              "similarity": 0.4255083501338959
+            },
+            {
+              "corpus_row": 41908,
+              "similarity": 0.4136814773082733
+            },
+            {
+              "corpus_row": 144160,
+              "similarity": 0.3607731759548187
+            },
+            {
+              "corpus_row": 191765,
+              "similarity": 0.35944658517837524
+            },
+            {
+              "corpus_row": 185316,
+              "similarity": 0.32623395323753357
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tới cần dầu.",
+          "Tôi cần đầu.",
+          "Tôi cần dầu."
+        ]
+      },
+      {
+        "id": "test-da-stone",
+        "document_id": "test-doc-da-stone",
+        "target": "Đây là đá.",
+        "output": "Đây là đá.",
+        "no_context_output": "Đây là đá.",
+        "correct": true,
+        "no_context_correct": true,
+        "context_promoted": false,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 91274,
+              "similarity": 0.3677908778190613
+            },
+            {
+              "corpus_row": 79822,
+              "similarity": 0.34519314765930176
+            },
+            {
+              "corpus_row": 139995,
+              "similarity": 0.2865302562713623
+            },
+            {
+              "corpus_row": 142954,
+              "similarity": 0.27893322706222534
+            },
+            {
+              "corpus_row": 110390,
+              "similarity": 0.27034491300582886
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Đây là đá.",
+          "Đây là da.",
+          "Đây là đã."
+        ]
+      },
+      {
+        "id": "test-da-leather",
+        "document_id": "test-doc-da-leather",
+        "target": "Đây là da.",
+        "output": "Đây là đá.",
+        "no_context_output": "Đây là đá.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": false,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 125041,
+              "similarity": 0.4084228277206421
+            },
+            {
+              "corpus_row": 21191,
+              "similarity": 0.3083539605140686
+            },
+            {
+              "corpus_row": 179703,
+              "similarity": 0.3073997497558594
+            },
+            {
+              "corpus_row": 110288,
+              "similarity": 0.29280152916908264
+            },
+            {
+              "corpus_row": 100105,
+              "similarity": 0.28635933995246887
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Đây là đá.",
+          "Đây là đã.",
+          "Đây là da."
+        ]
+      },
+      {
+        "id": "test-ma-code",
+        "document_id": "test-doc-ma-code",
+        "target": "Tôi xem mã.",
+        "output": "Tôi xem mã.",
+        "no_context_output": "Tôi xem ma.",
+        "correct": true,
+        "no_context_correct": false,
+        "context_promoted": true,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 171975,
+              "similarity": 0.4058366119861603
+            },
+            {
+              "corpus_row": 156142,
+              "similarity": 0.36899590492248535
+            },
+            {
+              "corpus_row": 172691,
+              "similarity": 0.35707154870033264
+            },
+            {
+              "corpus_row": 105152,
+              "similarity": 0.35325887799263
+            },
+            {
+              "corpus_row": 109344,
+              "similarity": 0.3479975461959839
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tôi xem mã.",
+          "Tôi xem mà.",
+          "Tôi xem ma."
+        ]
+      },
+      {
+        "id": "test-ma-seedling",
+        "document_id": "test-doc-ma-seedling",
+        "target": "Tôi xem mạ.",
+        "output": "Tôi xem mà.",
+        "no_context_output": "Tôi xem ma.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": true,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 90335,
+              "similarity": 0.44100505113601685
+            },
+            {
+              "corpus_row": 99722,
+              "similarity": 0.30998873710632324
+            },
+            {
+              "corpus_row": 99008,
+              "similarity": 0.2942058742046356
+            },
+            {
+              "corpus_row": 66110,
+              "similarity": 0.29330143332481384
+            },
+            {
+              "corpus_row": 64285,
+              "similarity": 0.29304102063179016
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tôi xem mà.",
+          "Tôi xem mã.",
+          "Tôi xem ma."
+        ]
+      },
+      {
+        "id": "test-vai-role",
+        "document_id": "test-doc-vai-role",
+        "target": "Tôi chọn vai.",
+        "output": "Tôi cho vai.",
+        "no_context_output": "Tôi cho vai.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": false,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 418,
+              "similarity": 0.30972471833229065
+            },
+            {
+              "corpus_row": 79699,
+              "similarity": 0.30300840735435486
+            },
+            {
+              "corpus_row": 183153,
+              "similarity": 0.2920816242694855
+            },
+            {
+              "corpus_row": 182267,
+              "similarity": 0.2916339039802551
+            },
+            {
+              "corpus_row": 48862,
+              "similarity": 0.28796467185020447
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tôi cho vai.",
+          "Tôi chọn vai.",
+          "Tới chọn vai."
+        ]
+      },
+      {
+        "id": "test-vai-fabric",
+        "document_id": "test-doc-vai-fabric",
+        "target": "Tôi chọn vải.",
+        "output": "Tôi cho vai.",
+        "no_context_output": "Tôi cho vai.",
+        "correct": false,
+        "no_context_correct": false,
+        "context_promoted": false,
+        "context": {
+          "available": true,
+          "method": "train_only_tfidf_neighbor_centroid",
+          "reason": "Lexical support from train-corpus sentences; not a semantic correctness guarantee.",
+          "neighbor_count": 64,
+          "top_neighbors": [
+            {
+              "corpus_row": 92917,
+              "similarity": 0.31980085372924805
+            },
+            {
+              "corpus_row": 189154,
+              "similarity": 0.31393301486968994
+            },
+            {
+              "corpus_row": 123233,
+              "similarity": 0.29674458503723145
+            },
+            {
+              "corpus_row": 153488,
+              "similarity": 0.28627511858940125
+            },
+            {
+              "corpus_row": 118715,
+              "similarity": 0.285934180021286
+            }
+          ],
+          "calibrated_probability": false
+        },
+        "candidates": [
+          "Tôi cho vai.",
+          "Tới chọn vai.",
+          "Tôi chọn vai."
+        ]
+      }
+    ],
+    "end_to_end_accuracy": 0.25,
+    "end_to_end_no_context_accuracy": 0.08333333333333333
+  }
+}
