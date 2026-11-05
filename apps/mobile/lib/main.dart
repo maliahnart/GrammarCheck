@@ -6,11 +6,13 @@ import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'api.dart';
+import 'phase2_assist.dart';
 
 void main() => runApp(const GrammarCheckApp());
 
 class GrammarCheckApp extends StatelessWidget {
-  const GrammarCheckApp({super.key});
+  const GrammarCheckApp({super.key, this.phase2Assist = false});
+  final bool phase2Assist;
   @override
   Widget build(BuildContext context) => MaterialApp(
     title: 'GrammarCheck · Tiếng Việt',
@@ -30,12 +32,13 @@ class GrammarCheckApp extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
     ),
-    home: const Workspace(),
+    home: Workspace(phase2Assist: phase2Assist),
   );
 }
 
 class Workspace extends StatefulWidget {
-  const Workspace({super.key});
+  const Workspace({super.key, this.phase2Assist = false});
+  final bool phase2Assist;
   @override
   State<Workspace> createState() => _WorkspaceState();
 }
@@ -163,6 +166,42 @@ class _WorkspaceState extends State<Workspace> {
     }
     return '${(data['edits'] as List).length} đề xuất · ${data['chunks']} đoạn · ${(data['seconds'] as num).toStringAsFixed(1)} giây';
   });
+
+  Future<void> suggestContext(Map<String, dynamic> data) async {
+    final neighbors = await askForContext(context);
+    if (neighbors == null || !mounted || result != data) return;
+    await run((api, ticket) async {
+      final suggestions = await fetchContextEdits(api, {
+        'text': data['input'],
+        'normalize_abbrev': options['normalize_abbrev'],
+        'protected_terms': options['protected_terms'],
+        ...neighbors,
+      });
+      final edits = [...data['edits'] as List];
+      final visibleSelection = effectiveSelection(edits, selected);
+      final originalCount = edits.length;
+      for (final suggestion in suggestions) {
+        if (canAppendContextEdit(suggestion, edits, visibleSelection)) {
+          edits.add(suggestion);
+        }
+      }
+      if (mounted && ticket == generation && result == data) {
+        setState(() {
+          result = {
+            ...data,
+            'edits': [
+              ...edits.skip(originalCount),
+              ...edits.take(originalCount),
+            ],
+          };
+        });
+      }
+      final added = edits.length - originalCount;
+      return added == 0
+          ? 'Chưa có gợi ý bổ sung phù hợp.'
+          : '$added gợi ý theo ngữ cảnh. Bật đề xuất để áp dụng.';
+    });
+  }
 
   Future<void> pickText() async {
     try {
@@ -402,11 +441,11 @@ class _WorkspaceState extends State<Workspace> {
 
   Widget resultCard() {
     final data = result!;
-    final output = applyEdits(
-      data['input'] as String,
-      data['edits'] as List,
-      selected,
-    );
+    final edits = data['edits'] as List;
+    final visibleSelection = widget.phase2Assist
+        ? effectiveSelection(edits, selected)
+        : selected;
+    final output = applyEdits(data['input'] as String, edits, visibleSelection);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -444,14 +483,27 @@ class _WorkspaceState extends State<Workspace> {
           ),
         ),
         const SizedBox(height: 12),
+        if (widget.phase2Assist &&
+            page == 0 &&
+            data['mode'] == 'document' &&
+            data['model'] == 'ml' &&
+            (data['input'] as String).runes.length <= 2000)
+          Align(
+            alignment: Alignment.centerLeft,
+            child: TextButton.icon(
+              onPressed: busy ? null : () => suggestContext(data),
+              icon: const Icon(Icons.text_snippet_outlined),
+              label: const Text('Gợi ý theo ngữ cảnh'),
+            ),
+          ),
         const Text('Duyệt thay đổi · Bật/tắt từng đề xuất'),
-        for (final dynamic item in data['edits'] as List)
+        for (final dynamic item in edits)
           Card(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 CheckboxListTile(
-                  value: selected.contains(item['id']),
+                  value: visibleSelection.contains(item['id']),
                   title: Text(
                     '${(item['source'] as String).isEmpty ? '∅' : item['source']} → ${(item['replacement'] as String).isEmpty ? '∅' : item['replacement']}',
                   ),
@@ -459,9 +511,20 @@ class _WorkspaceState extends State<Workspace> {
                     '${item['explanation']}${item['reason'] == '' ? '' : '\n${item['reason']}'}',
                   ),
                   onChanged: (value) => setState(() {
-                    value!
-                        ? selected.add(item['id'] as String)
-                        : selected.remove(item['id']);
+                    if (value == true) {
+                      if (widget.phase2Assist) {
+                        for (final other in edits) {
+                          if (other != item &&
+                              isContextEdit(other) &&
+                              editsOverlap(other, item)) {
+                            selected.remove(other['id']);
+                          }
+                        }
+                      }
+                      selected.add(item['id'] as String);
+                    } else {
+                      selected.remove(item['id']);
+                    }
                   }),
                 ),
                 if (page == 1 && item['lesson_id'] != null)
