@@ -37,8 +37,13 @@ class GrammarCheckApp extends StatelessWidget {
 }
 
 class Workspace extends StatefulWidget {
-  const Workspace({super.key, this.phase2Assist = false});
+  const Workspace({
+    super.key,
+    this.phase2Assist = false,
+    this.publicApiBaseUrl = const String.fromEnvironment('PUBLIC_API_BASE_URL'),
+  });
   final bool phase2Assist;
+  final String publicApiBaseUrl;
   @override
   State<Workspace> createState() => _WorkspaceState();
 }
@@ -64,6 +69,8 @@ class _WorkspaceState extends State<Workspace> {
   Uint8List? datasetBytes;
   String? datasetName;
   static const modes = ['document', 'learn', 'dataset'];
+  bool get usesPublicApi => widget.publicApiBaseUrl.isNotEmpty;
+  String get settingsTitle => usesPublicApi ? 'Tùy chọn' : 'Kết nối & tùy chọn';
 
   Map<String, dynamic> get options => {
     'model': model,
@@ -86,7 +93,9 @@ class _WorkspaceState extends State<Workspace> {
     final preferences = await SharedPreferences.getInstance();
     if (!mounted) return;
     setState(() {
-      endpoint.text = preferences.getString('endpoint') ?? endpoint.text;
+      if (!usesPublicApi) {
+        endpoint.text = preferences.getString('endpoint') ?? endpoint.text;
+      }
       model = preferences.getString('model') ?? 'ml';
       preserve = preferences.getBool('preserve') ?? true;
       abbreviations = preferences.getBool('abbreviations') ?? false;
@@ -105,7 +114,9 @@ class _WorkspaceState extends State<Workspace> {
       status = 'Đang xử lý…';
     });
     try {
-      final api = GrammarApi(endpoint.text, apiKey.text);
+      final api = usesPublicApi
+          ? GrammarApi(widget.publicApiBaseUrl, '')
+          : GrammarApi(endpoint.text, apiKey.text);
       active = api;
       final message = await action(api, ticket);
       if (mounted && ticket == generation) setState(() => status = message);
@@ -311,30 +322,33 @@ class _WorkspaceState extends State<Workspace> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  'Kết nối & tùy chọn',
+                  settingsTitle,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 16),
-                TextField(
-                  controller: endpoint,
-                  decoration: const InputDecoration(
-                    labelText: 'Địa chỉ API',
-                    helperText: 'Máy thật: dùng IP LAN hoặc HTTPS của máy chủ.',
+                if (!usesPublicApi) ...[
+                  TextField(
+                    controller: endpoint,
+                    decoration: const InputDecoration(
+                      labelText: 'Địa chỉ API',
+                      helperText:
+                          'Máy thật: dùng IP LAN hoặc HTTPS của máy chủ.',
+                    ),
+                    keyboardType: TextInputType.url,
                   ),
-                  keyboardType: TextInputType.url,
-                ),
-                const SizedBox(height: 12),
-                TextField(
-                  controller: apiKey,
-                  obscureText: true,
-                  autocorrect: false,
-                  enableSuggestions: false,
-                  decoration: const InputDecoration(
-                    labelText: 'API key (nếu có)',
-                    helperText: 'Chỉ giữ trong phiên mở ứng dụng.',
+                  const SizedBox(height: 12),
+                  TextField(
+                    controller: apiKey,
+                    obscureText: true,
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    decoration: const InputDecoration(
+                      labelText: 'API key (nếu có)',
+                      helperText: 'Chỉ giữ trong phiên mở ứng dụng.',
+                    ),
                   ),
-                ),
-                const SizedBox(height: 12),
+                  const SizedBox(height: 12),
+                ],
                 DropdownButtonFormField<String>(
                   initialValue: model,
                   decoration: const InputDecoration(labelText: 'Mô hình'),
@@ -387,7 +401,9 @@ class _WorkspaceState extends State<Workspace> {
     await run((api, ticket) async {
       await api.get('/health');
       final preferences = await SharedPreferences.getInstance();
-      await preferences.setString('endpoint', endpoint.text);
+      if (!usesPublicApi) {
+        await preferences.setString('endpoint', endpoint.text);
+      }
       await preferences.setString('model', model);
       await preferences.setBool('preserve', preserve);
       await preferences.setBool('abbreviations', abbreviations);
@@ -686,7 +702,7 @@ class _WorkspaceState extends State<Workspace> {
       ),
       actions: [
         IconButton(
-          tooltip: 'Kết nối & tùy chọn',
+          tooltip: settingsTitle,
           onPressed: busy ? null : settings,
           icon: const Icon(Icons.tune),
         ),

@@ -19,4 +19,24 @@ void main() {
     expect(find.text('Chọn CSV / JSONL'), findsOneWidget);
     expect(find.text('Tên cột văn bản'), findsOneWidget);
   });
+
+  testWidgets('public builds hide connection fields despite a saved endpoint', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({
+      'endpoint': 'http://old.local:8000',
+    });
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Workspace(publicApiBaseUrl: 'http://10.0.2.2:8002'),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.tune));
+    await tester.pumpAndSettle();
+    expect(find.text('Tùy chọn'), findsOneWidget);
+    expect(find.text('Địa chỉ API'), findsNothing);
+    expect(find.text('API key (nếu có)'), findsNothing);
+    expect(find.text('Mô hình'), findsOneWidget);
+  });
 }
